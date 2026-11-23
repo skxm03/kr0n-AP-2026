@@ -1,0 +1,54 @@
+=== R26 run 1 ===
+Nested Loop  (cost=0.28..16.33 rows=1 width=59) (actual time=0.029..0.029 rows=0.00 loops=1)
+  Buffers: shared hit=4
+  ->  Index Scan using organizations_pkey on organizations o  (cost=0.14..8.15 rows=1 width=53) (actual time=0.012..0.013 rows=1.00 loops=1)
+        Index Cond: (id = '10000000-0000-0000-0000-000000000001'::uuid)
+        Index Searches: 1
+        Buffers: shared hit=2
+  ->  Index Scan using org_memberships_user_idx on organization_memberships om  (cost=0.14..8.16 rows=1 width=22) (actual time=0.015..0.016 rows=0.00 loops=1)
+        Index Cond: (user_id = '00000000-0000-0000-0000-000000000001'::uuid)
+        Filter: (organization_id = '10000000-0000-0000-0000-000000000001'::uuid)
+        Rows Removed by Filter: 1
+        Index Searches: 1
+        Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=176
+Planning Time: 1.093 ms
+Execution Time: 0.091 ms
+
+=== R26 run 2 ===
+Nested Loop  (cost=0.28..16.33 rows=1 width=59) (actual time=0.027..0.028 rows=0.00 loops=1)
+  Buffers: shared hit=4
+  ->  Index Scan using organizations_pkey on organizations o  (cost=0.14..8.15 rows=1 width=53) (actual time=0.011..0.012 rows=1.00 loops=1)
+        Index Cond: (id = '10000000-0000-0000-0000-000000000001'::uuid)
+        Index Searches: 1
+        Buffers: shared hit=2
+  ->  Index Scan using org_memberships_user_idx on organization_memberships om  (cost=0.14..8.16 rows=1 width=22) (actual time=0.015..0.015 rows=0.00 loops=1)
+        Index Cond: (user_id = '00000000-0000-0000-0000-000000000001'::uuid)
+        Filter: (organization_id = '10000000-0000-0000-0000-000000000001'::uuid)
+        Rows Removed by Filter: 1
+        Index Searches: 1
+        Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=176
+Planning Time: 0.899 ms
+Execution Time: 0.091 ms
+
+=== R26 run 3 ===
+Nested Loop  (cost=0.28..16.33 rows=1 width=59) (actual time=0.026..0.026 rows=0.00 loops=1)
+  Buffers: shared hit=4
+  ->  Index Scan using organizations_pkey on organizations o  (cost=0.14..8.15 rows=1 width=53) (actual time=0.011..0.011 rows=1.00 loops=1)
+        Index Cond: (id = '10000000-0000-0000-0000-000000000001'::uuid)
+        Index Searches: 1
+        Buffers: shared hit=2
+  ->  Index Scan using org_memberships_user_idx on organization_memberships om  (cost=0.14..8.16 rows=1 width=22) (actual time=0.014..0.014 rows=0.00 loops=1)
+        Index Cond: (user_id = '00000000-0000-0000-0000-000000000001'::uuid)
+        Filter: (organization_id = '10000000-0000-0000-0000-000000000001'::uuid)
+        Rows Removed by Filter: 1
+        Index Searches: 1
+        Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=176
+Planning Time: 1.074 ms
+Execution Time: 0.086 ms
+

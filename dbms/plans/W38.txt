@@ -1,0 +1,51 @@
+=== W38 run 1 ===
+Delete on organizations  (cost=0.14..8.15 rows=0 width=0) (actual time=0.117..0.118 rows=0.00 loops=1)
+  Buffers: shared hit=15
+  ->  Index Scan using organizations_pkey on organizations  (cost=0.14..8.15 rows=1 width=6) (actual time=0.017..0.018 rows=1.00 loops=1)
+        Index Cond: (id = '10000000-0000-0000-0000-000000000020'::uuid)
+        Index Searches: 1
+        Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=81
+Planning Time: 0.471 ms
+Trigger for constraint organization_memberships_organization_id_fkey: time=0.475 calls=1
+Trigger for constraint api_tokens_organization_id_fkey: time=0.995 calls=1
+Trigger for constraint organization_invites_organization_id_fkey: time=0.516 calls=1
+Trigger for constraint audit_events_organization_id_fkey: time=0.960 calls=1
+Trigger for constraint github_installations_organization_id_fkey: time=0.467 calls=1
+Execution Time: 3.642 ms
+
+=== W38 run 2 ===
+Delete on organizations  (cost=0.14..8.15 rows=0 width=0) (actual time=0.122..0.122 rows=0.00 loops=1)
+  Buffers: shared hit=15
+  ->  Index Scan using organizations_pkey on organizations  (cost=0.14..8.15 rows=1 width=6) (actual time=0.024..0.025 rows=1.00 loops=1)
+        Index Cond: (id = '10000000-0000-0000-0000-000000000020'::uuid)
+        Index Searches: 1
+        Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=81
+Planning Time: 0.607 ms
+Trigger for constraint organization_memberships_organization_id_fkey: time=0.510 calls=1
+Trigger for constraint api_tokens_organization_id_fkey: time=0.508 calls=1
+Trigger for constraint organization_invites_organization_id_fkey: time=0.512 calls=1
+Trigger for constraint audit_events_organization_id_fkey: time=0.457 calls=1
+Trigger for constraint github_installations_organization_id_fkey: time=0.334 calls=1
+Execution Time: 2.621 ms
+
+=== W38 run 3 ===
+Delete on organizations  (cost=0.14..8.15 rows=0 width=0) (actual time=0.092..0.093 rows=0.00 loops=1)
+  Buffers: shared hit=15
+  ->  Index Scan using organizations_pkey on organizations  (cost=0.14..8.15 rows=1 width=6) (actual time=0.016..0.017 rows=1.00 loops=1)
+        Index Cond: (id = '10000000-0000-0000-0000-000000000020'::uuid)
+        Index Searches: 1
+        Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=81
+Planning Time: 0.460 ms
+Trigger for constraint organization_memberships_organization_id_fkey: time=0.751 calls=1
+Trigger for constraint api_tokens_organization_id_fkey: time=0.659 calls=1
+Trigger for constraint organization_invites_organization_id_fkey: time=0.408 calls=1
+Trigger for constraint audit_events_organization_id_fkey: time=0.427 calls=1
+Trigger for constraint github_installations_organization_id_fkey: time=0.386 calls=1
+Execution Time: 2.840 ms
+

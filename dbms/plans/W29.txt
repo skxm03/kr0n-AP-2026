@@ -1,0 +1,45 @@
+=== W29 run 1 ===
+Insert on refresh_token_history  (cost=0.00..0.01 rows=0 width=0) (actual time=0.448..0.448 rows=0.00 loops=1)
+  Conflict Resolution: NOTHING
+  Conflict Arbiter Indexes: refresh_token_history_pkey
+  Tuples Inserted: 1
+  Conflicting Tuples: 0
+  Buffers: shared hit=17
+  ->  Result  (cost=0.00..0.01 rows=1 width=72) (actual time=0.004..0.005 rows=1.00 loops=1)
+Planning:
+  Buffers: shared hit=57
+Planning Time: 0.172 ms
+Trigger for constraint refresh_token_history_session_id_fkey: time=0.971 calls=1
+Trigger for constraint refresh_token_history_user_id_fkey: time=0.552 calls=1
+Execution Time: 2.025 ms
+
+=== W29 run 2 ===
+Insert on refresh_token_history  (cost=0.00..0.01 rows=0 width=0) (actual time=0.265..0.265 rows=0.00 loops=1)
+  Conflict Resolution: NOTHING
+  Conflict Arbiter Indexes: refresh_token_history_pkey
+  Tuples Inserted: 1
+  Conflicting Tuples: 0
+  Buffers: shared hit=18
+  ->  Result  (cost=0.00..0.01 rows=1 width=72) (actual time=0.003..0.004 rows=1.00 loops=1)
+Planning:
+  Buffers: shared hit=57
+Planning Time: 0.135 ms
+Trigger for constraint refresh_token_history_session_id_fkey: time=0.831 calls=1
+Trigger for constraint refresh_token_history_user_id_fkey: time=0.435 calls=1
+Execution Time: 1.572 ms
+
+=== W29 run 3 ===
+Insert on refresh_token_history  (cost=0.00..0.01 rows=0 width=0) (actual time=0.201..0.201 rows=0.00 loops=1)
+  Conflict Resolution: NOTHING
+  Conflict Arbiter Indexes: refresh_token_history_pkey
+  Tuples Inserted: 1
+  Conflicting Tuples: 0
+  Buffers: shared hit=18
+  ->  Result  (cost=0.00..0.01 rows=1 width=72) (actual time=0.002..0.002 rows=1.00 loops=1)
+Planning:
+  Buffers: shared hit=57
+Planning Time: 0.103 ms
+Trigger for constraint refresh_token_history_session_id_fkey: time=0.691 calls=1
+Trigger for constraint refresh_token_history_user_id_fkey: time=0.341 calls=1
+Execution Time: 1.267 ms
+

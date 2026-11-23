@@ -1,0 +1,36 @@
+=== W28 run 1 ===
+Update on sessions  (cost=0.14..8.16 rows=0 width=0) (actual time=0.210..0.211 rows=0.00 loops=1)
+  Buffers: shared hit=16
+  ->  Index Scan using sessions_pkey on sessions  (cost=0.14..8.16 rows=1 width=14) (actual time=0.011..0.012 rows=1.00 loops=1)
+        Index Cond: (id = '30000000-0000-0000-0000-000000000001'::uuid)
+        Index Searches: 1
+        Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=104
+Planning Time: 0.884 ms
+Execution Time: 0.349 ms
+
+=== W28 run 2 ===
+Update on sessions  (cost=0.14..8.16 rows=0 width=0) (actual time=0.363..0.364 rows=0.00 loops=1)
+  Buffers: shared hit=20
+  ->  Index Scan using sessions_pkey on sessions  (cost=0.14..8.16 rows=1 width=14) (actual time=0.034..0.037 rows=1.00 loops=1)
+        Index Cond: (id = '30000000-0000-0000-0000-000000000001'::uuid)
+        Index Searches: 1
+        Buffers: shared hit=4
+Planning:
+  Buffers: shared hit=104
+Planning Time: 0.886 ms
+Execution Time: 0.591 ms
+
+=== W28 run 3 ===
+Update on sessions  (cost=0.14..8.16 rows=0 width=0) (actual time=0.253..0.253 rows=0.00 loops=1)
+  Buffers: shared hit=20
+  ->  Index Scan using sessions_pkey on sessions  (cost=0.14..8.16 rows=1 width=14) (actual time=0.024..0.026 rows=1.00 loops=1)
+        Index Cond: (id = '30000000-0000-0000-0000-000000000001'::uuid)
+        Index Searches: 1
+        Buffers: shared hit=4
+Planning:
+  Buffers: shared hit=104
+Planning Time: 0.796 ms
+Execution Time: 0.544 ms
+

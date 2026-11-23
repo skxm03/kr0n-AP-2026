@@ -1,0 +1,27 @@
+=== W25 run 1 ===
+Insert on users  (cost=0.00..0.02 rows=0 width=0) (actual time=0.372..0.372 rows=0.00 loops=1)
+  Buffers: shared hit=71
+  ->  Result  (cost=0.00..0.02 rows=1 width=180) (actual time=0.004..0.004 rows=1.00 loops=1)
+Planning:
+  Buffers: shared hit=3
+Planning Time: 0.059 ms
+Execution Time: 0.415 ms
+
+=== W25 run 2 ===
+Insert on users  (cost=0.00..0.02 rows=0 width=0) (actual time=0.386..0.386 rows=0.00 loops=1)
+  Buffers: shared hit=73
+  ->  Result  (cost=0.00..0.02 rows=1 width=180) (actual time=0.004..0.004 rows=1.00 loops=1)
+Planning:
+  Buffers: shared hit=3
+Planning Time: 0.062 ms
+Execution Time: 0.429 ms
+
+=== W25 run 3 ===
+Insert on users  (cost=0.00..0.02 rows=0 width=0) (actual time=0.396..0.396 rows=0.00 loops=1)
+  Buffers: shared hit=73
+  ->  Result  (cost=0.00..0.02 rows=1 width=180) (actual time=0.004..0.004 rows=1.00 loops=1)
+Planning:
+  Buffers: shared hit=3
+Planning Time: 0.060 ms
+Execution Time: 0.442 ms
+

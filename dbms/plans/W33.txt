@@ -1,0 +1,36 @@
+=== W33 run 1 ===
+Update on users  (cost=0.14..8.17 rows=0 width=0) (actual time=0.305..0.305 rows=0.00 loops=1)
+  Buffers: shared hit=53
+  ->  Index Scan using users_pkey on users  (cost=0.14..8.17 rows=1 width=22) (actual time=0.012..0.014 rows=1.00 loops=1)
+        Index Cond: (id = '00000000-0000-0000-0000-000000000001'::uuid)
+        Index Searches: 1
+        Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=85
+Planning Time: 0.442 ms
+Execution Time: 0.428 ms
+
+=== W33 run 2 ===
+Update on users  (cost=0.14..8.17 rows=0 width=0) (actual time=0.337..0.338 rows=0.00 loops=1)
+  Buffers: shared hit=56
+  ->  Index Scan using users_pkey on users  (cost=0.14..8.17 rows=1 width=22) (actual time=0.022..0.024 rows=1.00 loops=1)
+        Index Cond: (id = '00000000-0000-0000-0000-000000000001'::uuid)
+        Index Searches: 1
+        Buffers: shared hit=4
+Planning:
+  Buffers: shared hit=85
+Planning Time: 0.493 ms
+Execution Time: 0.472 ms
+
+=== W33 run 3 ===
+Update on users  (cost=0.14..8.17 rows=0 width=0) (actual time=0.333..0.334 rows=0.00 loops=1)
+  Buffers: shared hit=56
+  ->  Index Scan using users_pkey on users  (cost=0.14..8.17 rows=1 width=22) (actual time=0.024..0.026 rows=1.00 loops=1)
+        Index Cond: (id = '00000000-0000-0000-0000-000000000001'::uuid)
+        Index Searches: 1
+        Buffers: shared hit=4
+Planning:
+  Buffers: shared hit=85
+Planning Time: 0.505 ms
+Execution Time: 0.484 ms
+

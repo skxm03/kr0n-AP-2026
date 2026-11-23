@@ -1,0 +1,36 @@
+=== W20 run 1 ===
+Delete on password_credentials  (cost=0.14..8.16 rows=0 width=0) (actual time=0.044..0.044 rows=0.00 loops=1)
+  Buffers: shared hit=3
+  ->  Index Scan using password_credentials_pkey on password_credentials  (cost=0.14..8.16 rows=1 width=6) (actual time=0.029..0.030 rows=1.00 loops=1)
+        Index Cond: (user_id = '00000000-0000-0000-0000-000000000001'::uuid)
+        Index Searches: 1
+        Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=64
+Planning Time: 0.455 ms
+Execution Time: 0.167 ms
+
+=== W20 run 2 ===
+Delete on password_credentials  (cost=0.14..8.16 rows=0 width=0) (actual time=0.042..0.042 rows=0.00 loops=1)
+  Buffers: shared hit=3
+  ->  Index Scan using password_credentials_pkey on password_credentials  (cost=0.14..8.16 rows=1 width=6) (actual time=0.019..0.019 rows=1.00 loops=1)
+        Index Cond: (user_id = '00000000-0000-0000-0000-000000000001'::uuid)
+        Index Searches: 1
+        Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=64
+Planning Time: 0.493 ms
+Execution Time: 0.171 ms
+
+=== W20 run 3 ===
+Delete on password_credentials  (cost=0.14..8.16 rows=0 width=0) (actual time=0.035..0.035 rows=0.00 loops=1)
+  Buffers: shared hit=3
+  ->  Index Scan using password_credentials_pkey on password_credentials  (cost=0.14..8.16 rows=1 width=6) (actual time=0.019..0.019 rows=1.00 loops=1)
+        Index Cond: (user_id = '00000000-0000-0000-0000-000000000001'::uuid)
+        Index Searches: 1
+        Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=64
+Planning Time: 0.344 ms
+Execution Time: 0.130 ms
+

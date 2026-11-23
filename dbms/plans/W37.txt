@@ -1,0 +1,36 @@
+=== W37 run 1 ===
+Update on organizations  (cost=0.14..8.16 rows=1 width=46) (actual time=0.204..0.205 rows=1.00 loops=1)
+  Buffers: shared hit=31
+  ->  Index Scan using organizations_pkey on organizations  (cost=0.14..8.16 rows=1 width=46) (actual time=0.013..0.014 rows=1.00 loops=1)
+        Index Cond: (id = '10000000-0000-0000-0000-000000000001'::uuid)
+        Index Searches: 1
+        Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=81
+Planning Time: 0.579 ms
+Execution Time: 0.348 ms
+
+=== W37 run 2 ===
+Update on organizations  (cost=0.14..8.16 rows=1 width=46) (actual time=0.230..0.232 rows=1.00 loops=1)
+  Buffers: shared hit=31
+  ->  Index Scan using organizations_pkey on organizations  (cost=0.14..8.16 rows=1 width=46) (actual time=0.026..0.027 rows=1.00 loops=1)
+        Index Cond: (id = '10000000-0000-0000-0000-000000000001'::uuid)
+        Index Searches: 1
+        Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=81
+Planning Time: 0.544 ms
+Execution Time: 0.391 ms
+
+=== W37 run 3 ===
+Update on organizations  (cost=0.14..8.16 rows=1 width=46) (actual time=0.200..0.203 rows=1.00 loops=1)
+  Buffers: shared hit=31
+  ->  Index Scan using organizations_pkey on organizations  (cost=0.14..8.16 rows=1 width=46) (actual time=0.021..0.023 rows=1.00 loops=1)
+        Index Cond: (id = '10000000-0000-0000-0000-000000000001'::uuid)
+        Index Searches: 1
+        Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=81
+Planning Time: 0.491 ms
+Execution Time: 0.331 ms
+

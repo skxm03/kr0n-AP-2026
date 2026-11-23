@@ -1,0 +1,36 @@
+=== W31 run 1 ===
+Update on sessions  (cost=0.14..8.16 rows=0 width=0) (actual time=0.224..0.224 rows=0.00 loops=1)
+  Buffers: shared hit=23
+  ->  Index Scan using sessions_token_hash_key on sessions  (cost=0.14..8.16 rows=1 width=14) (actual time=0.031..0.033 rows=1.00 loops=1)
+        Index Cond: (token_hash = 'token_hash_sess_001'::text)
+        Index Searches: 1
+        Buffers: shared hit=4
+Planning:
+  Buffers: shared hit=107
+Planning Time: 0.771 ms
+Execution Time: 0.344 ms
+
+=== W31 run 2 ===
+Update on sessions  (cost=0.14..8.16 rows=0 width=0) (actual time=0.199..0.200 rows=0.00 loops=1)
+  Buffers: shared hit=23
+  ->  Index Scan using sessions_token_hash_key on sessions  (cost=0.14..8.16 rows=1 width=14) (actual time=0.027..0.028 rows=1.00 loops=1)
+        Index Cond: (token_hash = 'token_hash_sess_001'::text)
+        Index Searches: 1
+        Buffers: shared hit=4
+Planning:
+  Buffers: shared hit=107
+Planning Time: 0.487 ms
+Execution Time: 0.309 ms
+
+=== W31 run 3 ===
+Update on sessions  (cost=0.14..8.16 rows=0 width=0) (actual time=0.207..0.208 rows=0.00 loops=1)
+  Buffers: shared hit=23
+  ->  Index Scan using sessions_token_hash_key on sessions  (cost=0.14..8.16 rows=1 width=14) (actual time=0.029..0.031 rows=1.00 loops=1)
+        Index Cond: (token_hash = 'token_hash_sess_001'::text)
+        Index Searches: 1
+        Buffers: shared hit=4
+Planning:
+  Buffers: shared hit=107
+Planning Time: 0.856 ms
+Execution Time: 0.334 ms
+

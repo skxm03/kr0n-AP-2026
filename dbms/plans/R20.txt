@@ -1,0 +1,42 @@
+=== R20 run 1 ===
+LockRows  (cost=0.14..8.17 rows=1 width=12) (actual time=0.014..0.015 rows=0.00 loops=1)
+  Buffers: shared hit=2
+  ->  Index Scan using org_memberships_user_idx on organization_memberships  (cost=0.14..8.16 rows=1 width=12) (actual time=0.014..0.014 rows=0.00 loops=1)
+        Index Cond: (user_id = '00000000-0000-0000-0000-000000000001'::uuid)
+        Filter: (organization_id = '10000000-0000-0000-0000-000000000001'::uuid)
+        Rows Removed by Filter: 1
+        Index Searches: 1
+        Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=97
+Planning Time: 0.599 ms
+Execution Time: 0.067 ms
+
+=== R20 run 2 ===
+LockRows  (cost=0.14..8.17 rows=1 width=12) (actual time=0.016..0.016 rows=0.00 loops=1)
+  Buffers: shared hit=2
+  ->  Index Scan using org_memberships_user_idx on organization_memberships  (cost=0.14..8.16 rows=1 width=12) (actual time=0.015..0.016 rows=0.00 loops=1)
+        Index Cond: (user_id = '00000000-0000-0000-0000-000000000001'::uuid)
+        Filter: (organization_id = '10000000-0000-0000-0000-000000000001'::uuid)
+        Rows Removed by Filter: 1
+        Index Searches: 1
+        Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=97
+Planning Time: 0.802 ms
+Execution Time: 0.069 ms
+
+=== R20 run 3 ===
+LockRows  (cost=0.14..8.17 rows=1 width=12) (actual time=0.014..0.015 rows=0.00 loops=1)
+  Buffers: shared hit=2
+  ->  Index Scan using org_memberships_user_idx on organization_memberships  (cost=0.14..8.16 rows=1 width=12) (actual time=0.014..0.014 rows=0.00 loops=1)
+        Index Cond: (user_id = '00000000-0000-0000-0000-000000000001'::uuid)
+        Filter: (organization_id = '10000000-0000-0000-0000-000000000001'::uuid)
+        Rows Removed by Filter: 1
+        Index Searches: 1
+        Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=97
+Planning Time: 0.664 ms
+Execution Time: 0.056 ms
+

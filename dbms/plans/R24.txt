@@ -1,0 +1,36 @@
+=== R24 run 1 ===
+LockRows  (cost=0.14..8.16 rows=1 width=87) (actual time=0.041..0.043 rows=1.00 loops=1)
+  Buffers: shared hit=3
+  ->  Index Scan using organization_invites_token_hash_key on organization_invites  (cost=0.14..8.15 rows=1 width=87) (actual time=0.022..0.023 rows=1.00 loops=1)
+        Index Cond: (token_hash = 'invite_token_hash_001'::text)
+        Index Searches: 1
+        Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=130
+Planning Time: 0.796 ms
+Execution Time: 0.094 ms
+
+=== R24 run 2 ===
+LockRows  (cost=0.14..8.16 rows=1 width=87) (actual time=0.056..0.058 rows=1.00 loops=1)
+  Buffers: shared hit=3
+  ->  Index Scan using organization_invites_token_hash_key on organization_invites  (cost=0.14..8.15 rows=1 width=87) (actual time=0.028..0.029 rows=1.00 loops=1)
+        Index Cond: (token_hash = 'invite_token_hash_001'::text)
+        Index Searches: 1
+        Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=130
+Planning Time: 0.661 ms
+Execution Time: 0.118 ms
+
+=== R24 run 3 ===
+LockRows  (cost=0.14..8.16 rows=1 width=87) (actual time=0.047..0.048 rows=1.00 loops=1)
+  Buffers: shared hit=3
+  ->  Index Scan using organization_invites_token_hash_key on organization_invites  (cost=0.14..8.15 rows=1 width=87) (actual time=0.024..0.025 rows=1.00 loops=1)
+        Index Cond: (token_hash = 'invite_token_hash_001'::text)
+        Index Searches: 1
+        Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=130
+Planning Time: 0.798 ms
+Execution Time: 0.097 ms
+

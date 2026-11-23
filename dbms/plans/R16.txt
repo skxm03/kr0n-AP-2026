@@ -1,0 +1,60 @@
+=== R16 run 1 ===
+Sort  (cost=17.09..17.09 rows=1 width=59) (actual time=0.034..0.034 rows=1.00 loops=1)
+  Sort Key: o.created_at DESC
+  Sort Method: quicksort  Memory: 25kB
+  Buffers: shared hit=7
+  ->  Nested Loop  (cost=0.28..17.08 rows=1 width=59) (actual time=0.014..0.015 rows=1.00 loops=1)
+        Buffers: shared hit=4
+        ->  Index Scan using org_memberships_user_idx on organization_memberships om  (cost=0.14..8.16 rows=1 width=22) (actual time=0.006..0.007 rows=1.00 loops=1)
+              Index Cond: (user_id = '00000000-0000-0000-0000-000000000001'::uuid)
+              Index Searches: 1
+              Buffers: shared hit=2
+        ->  Index Scan using organizations_pkey on organizations o  (cost=0.14..8.15 rows=1 width=53) (actual time=0.005..0.005 rows=1.00 loops=1)
+              Index Cond: (id = om.organization_id)
+              Index Searches: 1
+              Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=289
+Planning Time: 0.921 ms
+Execution Time: 0.073 ms
+
+=== R16 run 2 ===
+Sort  (cost=17.09..17.09 rows=1 width=59) (actual time=0.049..0.050 rows=1.00 loops=1)
+  Sort Key: o.created_at DESC
+  Sort Method: quicksort  Memory: 25kB
+  Buffers: shared hit=7
+  ->  Nested Loop  (cost=0.28..17.08 rows=1 width=59) (actual time=0.020..0.020 rows=1.00 loops=1)
+        Buffers: shared hit=4
+        ->  Index Scan using org_memberships_user_idx on organization_memberships om  (cost=0.14..8.16 rows=1 width=22) (actual time=0.009..0.010 rows=1.00 loops=1)
+              Index Cond: (user_id = '00000000-0000-0000-0000-000000000001'::uuid)
+              Index Searches: 1
+              Buffers: shared hit=2
+        ->  Index Scan using organizations_pkey on organizations o  (cost=0.14..8.15 rows=1 width=53) (actual time=0.007..0.007 rows=1.00 loops=1)
+              Index Cond: (id = om.organization_id)
+              Index Searches: 1
+              Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=289
+Planning Time: 1.272 ms
+Execution Time: 0.102 ms
+
+=== R16 run 3 ===
+Sort  (cost=17.09..17.09 rows=1 width=59) (actual time=0.053..0.054 rows=1.00 loops=1)
+  Sort Key: o.created_at DESC
+  Sort Method: quicksort  Memory: 25kB
+  Buffers: shared hit=7
+  ->  Nested Loop  (cost=0.28..17.08 rows=1 width=59) (actual time=0.021..0.022 rows=1.00 loops=1)
+        Buffers: shared hit=4
+        ->  Index Scan using org_memberships_user_idx on organization_memberships om  (cost=0.14..8.16 rows=1 width=22) (actual time=0.010..0.010 rows=1.00 loops=1)
+              Index Cond: (user_id = '00000000-0000-0000-0000-000000000001'::uuid)
+              Index Searches: 1
+              Buffers: shared hit=2
+        ->  Index Scan using organizations_pkey on organizations o  (cost=0.14..8.15 rows=1 width=53) (actual time=0.008..0.008 rows=1.00 loops=1)
+              Index Cond: (id = om.organization_id)
+              Index Searches: 1
+              Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=289
+Planning Time: 1.252 ms
+Execution Time: 0.106 ms
+

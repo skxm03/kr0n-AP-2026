@@ -1,0 +1,39 @@
+=== W12 run 1 ===
+Insert on password_credentials  (cost=0.00..0.01 rows=0 width=0) (actual time=0.205..0.206 rows=0.00 loops=1)
+  Conflict Resolution: UPDATE
+  Conflict Arbiter Indexes: password_credentials_pkey
+  Tuples Inserted: 0
+  Conflicting Tuples: 1
+  Buffers: shared hit=27
+  ->  Result  (cost=0.00..0.01 rows=1 width=64) (actual time=0.003..0.003 rows=1.00 loops=1)
+Planning:
+  Buffers: shared hit=30
+Planning Time: 0.085 ms
+Execution Time: 0.328 ms
+
+=== W12 run 2 ===
+Insert on password_credentials  (cost=0.00..0.01 rows=0 width=0) (actual time=0.358..0.358 rows=0.00 loops=1)
+  Conflict Resolution: UPDATE
+  Conflict Arbiter Indexes: password_credentials_pkey
+  Tuples Inserted: 0
+  Conflicting Tuples: 1
+  Buffers: shared hit=28
+  ->  Result  (cost=0.00..0.01 rows=1 width=64) (actual time=0.004..0.005 rows=1.00 loops=1)
+Planning:
+  Buffers: shared hit=30
+Planning Time: 0.138 ms
+Execution Time: 0.553 ms
+
+=== W12 run 3 ===
+Insert on password_credentials  (cost=0.00..0.01 rows=0 width=0) (actual time=0.496..0.496 rows=0.00 loops=1)
+  Conflict Resolution: UPDATE
+  Conflict Arbiter Indexes: password_credentials_pkey
+  Tuples Inserted: 0
+  Conflicting Tuples: 1
+  Buffers: shared hit=28
+  ->  Result  (cost=0.00..0.01 rows=1 width=64) (actual time=0.004..0.005 rows=1.00 loops=1)
+Planning:
+  Buffers: shared hit=30
+Planning Time: 0.135 ms
+Execution Time: 0.677 ms
+

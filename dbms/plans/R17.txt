@@ -1,0 +1,30 @@
+=== R17 run 1 ===
+Index Scan using organizations_pkey on organizations  (cost=0.14..8.15 rows=1 width=53) (actual time=0.008..0.008 rows=1.00 loops=1)
+  Index Cond: (id = '10000000-0000-0000-0000-000000000001'::uuid)
+  Index Searches: 1
+  Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=90
+Planning Time: 0.470 ms
+Execution Time: 0.047 ms
+
+=== R17 run 2 ===
+Index Scan using organizations_pkey on organizations  (cost=0.14..8.15 rows=1 width=53) (actual time=0.010..0.011 rows=1.00 loops=1)
+  Index Cond: (id = '10000000-0000-0000-0000-000000000001'::uuid)
+  Index Searches: 1
+  Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=90
+Planning Time: 0.536 ms
+Execution Time: 0.056 ms
+
+=== R17 run 3 ===
+Index Scan using organizations_pkey on organizations  (cost=0.14..8.15 rows=1 width=53) (actual time=0.014..0.015 rows=1.00 loops=1)
+  Index Cond: (id = '10000000-0000-0000-0000-000000000001'::uuid)
+  Index Searches: 1
+  Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=90
+Planning Time: 0.782 ms
+Execution Time: 0.077 ms
+

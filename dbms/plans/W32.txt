@@ -1,0 +1,42 @@
+=== W32 run 1 ===
+Update on sessions  (cost=0.14..8.16 rows=0 width=0) (actual time=0.014..0.015 rows=0.00 loops=1)
+  Buffers: shared hit=4
+  ->  Index Scan using sessions_pkey on sessions  (cost=0.14..8.16 rows=1 width=14) (actual time=0.014..0.014 rows=0.00 loops=1)
+        Index Cond: (id = '30000000-0000-0000-0000-000000000001'::uuid)
+        Filter: (user_id = '00000000-0000-0000-0000-000000000001'::uuid)
+        Rows Removed by Filter: 1
+        Index Searches: 1
+        Buffers: shared hit=4
+Planning:
+  Buffers: shared hit=107
+Planning Time: 0.652 ms
+Execution Time: 0.112 ms
+
+=== W32 run 2 ===
+Update on sessions  (cost=0.14..8.16 rows=0 width=0) (actual time=0.013..0.014 rows=0.00 loops=1)
+  Buffers: shared hit=2
+  ->  Index Scan using sessions_pkey on sessions  (cost=0.14..8.16 rows=1 width=14) (actual time=0.012..0.013 rows=0.00 loops=1)
+        Index Cond: (id = '30000000-0000-0000-0000-000000000001'::uuid)
+        Filter: (user_id = '00000000-0000-0000-0000-000000000001'::uuid)
+        Rows Removed by Filter: 1
+        Index Searches: 1
+        Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=107
+Planning Time: 0.508 ms
+Execution Time: 0.141 ms
+
+=== W32 run 3 ===
+Update on sessions  (cost=0.14..8.16 rows=0 width=0) (actual time=0.012..0.013 rows=0.00 loops=1)
+  Buffers: shared hit=2
+  ->  Index Scan using sessions_pkey on sessions  (cost=0.14..8.16 rows=1 width=14) (actual time=0.011..0.012 rows=0.00 loops=1)
+        Index Cond: (id = '30000000-0000-0000-0000-000000000001'::uuid)
+        Filter: (user_id = '00000000-0000-0000-0000-000000000001'::uuid)
+        Rows Removed by Filter: 1
+        Index Searches: 1
+        Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=107
+Planning Time: 0.629 ms
+Execution Time: 0.178 ms
+

@@ -1,0 +1,42 @@
+=== W51 run 1 ===
+Insert on github_installations  (cost=0.00..0.01 rows=1 width=200) (actual time=0.285..0.287 rows=1.00 loops=1)
+  Conflict Resolution: UPDATE
+  Conflict Arbiter Indexes: github_installations_installation_id_key
+  Conflict Filter: (github_installations.organization_id = excluded.organization_id)
+  Tuples Inserted: 0
+  Conflicting Tuples: 1
+  Buffers: shared hit=33
+  ->  Result  (cost=0.00..0.01 rows=1 width=200) (actual time=0.012..0.012 rows=1.00 loops=1)
+Planning:
+  Buffers: shared hit=65
+Planning Time: 0.259 ms
+Execution Time: 0.420 ms
+
+=== W51 run 2 ===
+Insert on github_installations  (cost=0.00..0.01 rows=1 width=200) (actual time=0.195..0.196 rows=1.00 loops=1)
+  Conflict Resolution: UPDATE
+  Conflict Arbiter Indexes: github_installations_installation_id_key
+  Conflict Filter: (github_installations.organization_id = excluded.organization_id)
+  Tuples Inserted: 0
+  Conflicting Tuples: 1
+  Buffers: shared hit=33
+  ->  Result  (cost=0.00..0.01 rows=1 width=200) (actual time=0.006..0.006 rows=1.00 loops=1)
+Planning:
+  Buffers: shared hit=65
+Planning Time: 0.185 ms
+Execution Time: 0.416 ms
+
+=== W51 run 3 ===
+Insert on github_installations  (cost=0.00..0.01 rows=1 width=200) (actual time=0.286..0.287 rows=1.00 loops=1)
+  Conflict Resolution: UPDATE
+  Conflict Arbiter Indexes: github_installations_installation_id_key
+  Conflict Filter: (github_installations.organization_id = excluded.organization_id)
+  Tuples Inserted: 0
+  Conflicting Tuples: 1
+  Buffers: shared hit=33
+  ->  Result  (cost=0.00..0.01 rows=1 width=200) (actual time=0.007..0.007 rows=1.00 loops=1)
+Planning:
+  Buffers: shared hit=65
+Planning Time: 0.209 ms
+Execution Time: 0.546 ms
+

@@ -1,0 +1,30 @@
+=== R2 run 1 ===
+Index Scan using users_pkey on users  (cost=0.14..8.16 rows=1 width=112) (actual time=0.011..0.012 rows=1.00 loops=1)
+  Index Cond: (id = '00000000-0000-0000-0000-000000000001'::uuid)
+  Index Searches: 1
+  Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=106
+Planning Time: 0.545 ms
+Execution Time: 0.059 ms
+
+=== R2 run 2 ===
+Index Scan using users_pkey on users  (cost=0.14..8.16 rows=1 width=112) (actual time=0.017..0.018 rows=1.00 loops=1)
+  Index Cond: (id = '00000000-0000-0000-0000-000000000001'::uuid)
+  Index Searches: 1
+  Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=106
+Planning Time: 0.707 ms
+Execution Time: 0.081 ms
+
+=== R2 run 3 ===
+Index Scan using users_pkey on users  (cost=0.14..8.16 rows=1 width=112) (actual time=0.015..0.016 rows=1.00 loops=1)
+  Index Cond: (id = '00000000-0000-0000-0000-000000000001'::uuid)
+  Index Searches: 1
+  Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=106
+Planning Time: 0.621 ms
+Execution Time: 0.070 ms
+

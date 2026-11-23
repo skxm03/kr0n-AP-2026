@@ -1,0 +1,24 @@
+=== W19 run 1 ===
+Insert on oauth_identities  (cost=0.00..0.01 rows=0 width=0) (actual time=0.312..0.313 rows=0.00 loops=1)
+  Buffers: shared hit=73
+  ->  Result  (cost=0.00..0.01 rows=1 width=112) (actual time=0.003..0.004 rows=1.00 loops=1)
+Planning Time: 0.051 ms
+Trigger for constraint oauth_identities_user_id_fkey: time=0.755 calls=1
+Execution Time: 1.107 ms
+
+=== W19 run 2 ===
+Insert on oauth_identities  (cost=0.00..0.01 rows=0 width=0) (actual time=0.236..0.237 rows=0.00 loops=1)
+  Buffers: shared hit=76
+  ->  Result  (cost=0.00..0.01 rows=1 width=112) (actual time=0.003..0.003 rows=1.00 loops=1)
+Planning Time: 0.044 ms
+Trigger for constraint oauth_identities_user_id_fkey: time=0.626 calls=1
+Execution Time: 0.896 ms
+
+=== W19 run 3 ===
+Insert on oauth_identities  (cost=0.00..0.01 rows=0 width=0) (actual time=0.355..0.355 rows=0.00 loops=1)
+  Buffers: shared hit=76
+  ->  Result  (cost=0.00..0.01 rows=1 width=112) (actual time=0.004..0.005 rows=1.00 loops=1)
+Planning Time: 0.056 ms
+Trigger for constraint oauth_identities_user_id_fkey: time=1.012 calls=1
+Execution Time: 1.431 ms
+

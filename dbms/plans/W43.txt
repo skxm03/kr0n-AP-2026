@@ -1,0 +1,42 @@
+=== W43 run 1 ===
+Update on organization_invites  (cost=0.14..8.18 rows=0 width=0) (actual time=0.016..0.017 rows=0.00 loops=1)
+  Buffers: shared hit=2
+  ->  Index Scan using organization_invites_org_pending_idx on organization_invites  (cost=0.14..8.18 rows=1 width=14) (actual time=0.015..0.015 rows=0.00 loops=1)
+        Index Cond: (organization_id = '10000000-0000-0000-0000-000000000001'::uuid)
+        Filter: ((accepted_at IS NULL) AND (revoked_at IS NULL) AND (email = 'invitee1@kr0n.dev'::text))
+        Rows Removed by Filter: 2
+        Index Searches: 1
+        Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=123
+Planning Time: 1.242 ms
+Execution Time: 0.190 ms
+
+=== W43 run 2 ===
+Update on organization_invites  (cost=0.14..8.18 rows=0 width=0) (actual time=0.009..0.009 rows=0.00 loops=1)
+  Buffers: shared hit=2
+  ->  Index Scan using organization_invites_org_pending_idx on organization_invites  (cost=0.14..8.18 rows=1 width=14) (actual time=0.009..0.009 rows=0.00 loops=1)
+        Index Cond: (organization_id = '10000000-0000-0000-0000-000000000001'::uuid)
+        Filter: ((accepted_at IS NULL) AND (revoked_at IS NULL) AND (email = 'invitee1@kr0n.dev'::text))
+        Rows Removed by Filter: 2
+        Index Searches: 1
+        Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=123
+Planning Time: 0.581 ms
+Execution Time: 0.111 ms
+
+=== W43 run 3 ===
+Update on organization_invites  (cost=0.14..8.18 rows=0 width=0) (actual time=0.016..0.016 rows=0.00 loops=1)
+  Buffers: shared hit=2
+  ->  Index Scan using organization_invites_org_pending_idx on organization_invites  (cost=0.14..8.18 rows=1 width=14) (actual time=0.015..0.015 rows=0.00 loops=1)
+        Index Cond: (organization_id = '10000000-0000-0000-0000-000000000001'::uuid)
+        Filter: ((accepted_at IS NULL) AND (revoked_at IS NULL) AND (email = 'invitee1@kr0n.dev'::text))
+        Rows Removed by Filter: 2
+        Index Searches: 1
+        Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=123
+Planning Time: 0.649 ms
+Execution Time: 0.163 ms
+

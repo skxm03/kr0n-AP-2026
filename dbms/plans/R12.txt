@@ -1,0 +1,66 @@
+=== R12 run 1 ===
+LockRows  (cost=8.31..13.32 rows=1 width=113) (actual time=0.100..0.103 rows=1.00 loops=1)
+  Buffers: shared hit=6
+  ->  Merge Left Join  (cost=8.31..13.31 rows=1 width=113) (actual time=0.069..0.071 rows=1.00 loops=1)
+        Merge Cond: (t.user_id = u.id)
+        Buffers: shared hit=5
+        ->  Sort  (cost=8.16..8.17 rows=1 width=84) (actual time=0.055..0.056 rows=1.00 loops=1)
+              Sort Key: t.user_id
+              Sort Method: quicksort  Memory: 25kB
+              Buffers: shared hit=3
+              ->  Index Scan using email_verification_tokens_token_hash_key on email_verification_tokens t  (cost=0.14..8.15 rows=1 width=84) (actual time=0.030..0.037 rows=1.00 loops=1)
+                    Index Cond: (token_hash = 'email_verify_hash_001'::text)
+                    Index Searches: 1
+                    Buffers: shared hit=3
+        ->  Index Scan using users_pkey on users u  (cost=0.14..16.39 rows=150 width=29) (actual time=0.010..0.010 rows=1.00 loops=1)
+              Index Searches: 1
+              Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=278
+Planning Time: 1.268 ms
+Execution Time: 0.211 ms
+
+=== R12 run 2 ===
+LockRows  (cost=8.31..13.32 rows=1 width=113) (actual time=0.080..0.081 rows=1.00 loops=1)
+  Buffers: shared hit=5
+  ->  Merge Left Join  (cost=8.31..13.31 rows=1 width=113) (actual time=0.055..0.056 rows=1.00 loops=1)
+        Merge Cond: (t.user_id = u.id)
+        Buffers: shared hit=4
+        ->  Sort  (cost=8.16..8.17 rows=1 width=84) (actual time=0.045..0.045 rows=1.00 loops=1)
+              Sort Key: t.user_id
+              Sort Method: quicksort  Memory: 25kB
+              Buffers: shared hit=2
+              ->  Index Scan using email_verification_tokens_token_hash_key on email_verification_tokens t  (cost=0.14..8.15 rows=1 width=84) (actual time=0.024..0.024 rows=1.00 loops=1)
+                    Index Cond: (token_hash = 'email_verify_hash_001'::text)
+                    Index Searches: 1
+                    Buffers: shared hit=2
+        ->  Index Scan using users_pkey on users u  (cost=0.14..16.39 rows=150 width=29) (actual time=0.008..0.008 rows=1.00 loops=1)
+              Index Searches: 1
+              Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=278
+Planning Time: 1.115 ms
+Execution Time: 0.158 ms
+
+=== R12 run 3 ===
+LockRows  (cost=8.31..13.32 rows=1 width=113) (actual time=0.089..0.091 rows=1.00 loops=1)
+  Buffers: shared hit=5
+  ->  Merge Left Join  (cost=8.31..13.31 rows=1 width=113) (actual time=0.064..0.064 rows=1.00 loops=1)
+        Merge Cond: (t.user_id = u.id)
+        Buffers: shared hit=4
+        ->  Sort  (cost=8.16..8.17 rows=1 width=84) (actual time=0.054..0.054 rows=1.00 loops=1)
+              Sort Key: t.user_id
+              Sort Method: quicksort  Memory: 25kB
+              Buffers: shared hit=2
+              ->  Index Scan using email_verification_tokens_token_hash_key on email_verification_tokens t  (cost=0.14..8.15 rows=1 width=84) (actual time=0.035..0.035 rows=1.00 loops=1)
+                    Index Cond: (token_hash = 'email_verify_hash_001'::text)
+                    Index Searches: 1
+                    Buffers: shared hit=2
+        ->  Index Scan using users_pkey on users u  (cost=0.14..16.39 rows=150 width=29) (actual time=0.007..0.007 rows=1.00 loops=1)
+              Index Searches: 1
+              Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=278
+Planning Time: 1.041 ms
+Execution Time: 0.154 ms
+

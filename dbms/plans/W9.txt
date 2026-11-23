@@ -1,0 +1,24 @@
+=== W9 run 1 ===
+Insert on password_reset_tokens  (cost=0.00..0.02 rows=0 width=0) (actual time=0.589..0.589 rows=0.00 loops=1)
+  Buffers: shared hit=64
+  ->  Result  (cost=0.00..0.02 rows=1 width=88) (actual time=0.008..0.008 rows=1.00 loops=1)
+Planning Time: 0.074 ms
+Trigger for constraint password_reset_tokens_user_id_fkey: time=0.812 calls=1
+Execution Time: 1.454 ms
+
+=== W9 run 2 ===
+Insert on password_reset_tokens  (cost=0.00..0.02 rows=0 width=0) (actual time=0.335..0.336 rows=0.00 loops=1)
+  Buffers: shared hit=66
+  ->  Result  (cost=0.00..0.02 rows=1 width=88) (actual time=0.007..0.008 rows=1.00 loops=1)
+Planning Time: 0.065 ms
+Trigger for constraint password_reset_tokens_user_id_fkey: time=0.896 calls=1
+Execution Time: 1.277 ms
+
+=== W9 run 3 ===
+Insert on password_reset_tokens  (cost=0.00..0.02 rows=0 width=0) (actual time=0.324..0.324 rows=0.00 loops=1)
+  Buffers: shared hit=66
+  ->  Result  (cost=0.00..0.02 rows=1 width=88) (actual time=0.010..0.011 rows=1.00 loops=1)
+Planning Time: 0.080 ms
+Trigger for constraint password_reset_tokens_user_id_fkey: time=0.945 calls=1
+Execution Time: 1.329 ms
+

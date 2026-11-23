@@ -1,0 +1,30 @@
+=== W44 run 1 ===
+Insert on organization_invites  (cost=0.00..0.02 rows=0 width=0) (actual time=0.805..0.806 rows=0.00 loops=1)
+  Buffers: shared hit=87
+  ->  Result  (cost=0.00..0.02 rows=1 width=176) (actual time=0.012..0.013 rows=1.00 loops=1)
+Planning Time: 0.061 ms
+Trigger for constraint organization_invites_organization_id_fkey: time=0.692 calls=1
+Trigger for constraint organization_invites_role_id_fkey: time=0.322 calls=1
+Trigger for constraint organization_invites_invited_by_user_id_fkey: time=0.318 calls=1
+Execution Time: 2.191 ms
+
+=== W44 run 2 ===
+Insert on organization_invites  (cost=0.00..0.02 rows=0 width=0) (actual time=0.339..0.340 rows=0.00 loops=1)
+  Buffers: shared hit=89
+  ->  Result  (cost=0.00..0.02 rows=1 width=176) (actual time=0.011..0.011 rows=1.00 loops=1)
+Planning Time: 0.054 ms
+Trigger for constraint organization_invites_organization_id_fkey: time=0.728 calls=1
+Trigger for constraint organization_invites_role_id_fkey: time=0.321 calls=1
+Trigger for constraint organization_invites_invited_by_user_id_fkey: time=0.347 calls=1
+Execution Time: 1.778 ms
+
+=== W44 run 3 ===
+Insert on organization_invites  (cost=0.00..0.02 rows=0 width=0) (actual time=0.380..0.381 rows=0.00 loops=1)
+  Buffers: shared hit=89
+  ->  Result  (cost=0.00..0.02 rows=1 width=176) (actual time=0.014..0.015 rows=1.00 loops=1)
+Planning Time: 0.062 ms
+Trigger for constraint organization_invites_organization_id_fkey: time=0.809 calls=1
+Trigger for constraint organization_invites_role_id_fkey: time=0.315 calls=1
+Trigger for constraint organization_invites_invited_by_user_id_fkey: time=0.303 calls=1
+Execution Time: 1.858 ms
+

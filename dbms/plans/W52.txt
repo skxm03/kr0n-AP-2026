@@ -1,0 +1,39 @@
+=== W52 run 1 ===
+Delete on github_installations  (cost=0.14..8.16 rows=0 width=0) (actual time=0.052..0.053 rows=0.00 loops=1)
+  Buffers: shared hit=3
+  ->  Index Scan using github_installations_org_idx on github_installations  (cost=0.14..8.16 rows=1 width=6) (actual time=0.025..0.026 rows=1.00 loops=1)
+        Index Cond: (organization_id = '10000000-0000-0000-0000-000000000020'::uuid)
+        Filter: (installation_id = 99887720)
+        Index Searches: 1
+        Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=112
+Planning Time: 0.533 ms
+Execution Time: 0.218 ms
+
+=== W52 run 2 ===
+Delete on github_installations  (cost=0.14..8.16 rows=0 width=0) (actual time=0.038..0.038 rows=0.00 loops=1)
+  Buffers: shared hit=3
+  ->  Index Scan using github_installations_org_idx on github_installations  (cost=0.14..8.16 rows=1 width=6) (actual time=0.016..0.017 rows=1.00 loops=1)
+        Index Cond: (organization_id = '10000000-0000-0000-0000-000000000020'::uuid)
+        Filter: (installation_id = 99887720)
+        Index Searches: 1
+        Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=112
+Planning Time: 0.781 ms
+Execution Time: 0.166 ms
+
+=== W52 run 3 ===
+Delete on github_installations  (cost=0.14..8.16 rows=0 width=0) (actual time=0.045..0.045 rows=0.00 loops=1)
+  Buffers: shared hit=3
+  ->  Index Scan using github_installations_org_idx on github_installations  (cost=0.14..8.16 rows=1 width=6) (actual time=0.019..0.020 rows=1.00 loops=1)
+        Index Cond: (organization_id = '10000000-0000-0000-0000-000000000020'::uuid)
+        Filter: (installation_id = 99887720)
+        Index Searches: 1
+        Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=112
+Planning Time: 0.574 ms
+Execution Time: 0.173 ms
+

@@ -1,0 +1,39 @@
+=== W6 run 1 ===
+Update on email_verification_tokens  (cost=0.14..8.16 rows=0 width=0) (actual time=0.154..0.155 rows=0.00 loops=1)
+  Buffers: shared hit=13
+  ->  Index Scan using email_verification_tokens_user_active_idx on email_verification_tokens  (cost=0.14..8.16 rows=1 width=14) (actual time=0.017..0.029 rows=1.00 loops=1)
+        Index Cond: (user_id = '00000000-0000-0000-0000-000000000001'::uuid)
+        Filter: (consumed_at IS NULL)
+        Index Searches: 1
+        Buffers: shared hit=3
+Planning:
+  Buffers: shared hit=97
+Planning Time: 0.733 ms
+Execution Time: 0.291 ms
+
+=== W6 run 2 ===
+Update on email_verification_tokens  (cost=0.14..8.16 rows=0 width=0) (actual time=0.163..0.164 rows=0.00 loops=1)
+  Buffers: shared hit=14
+  ->  Index Scan using email_verification_tokens_user_active_idx on email_verification_tokens  (cost=0.14..8.16 rows=1 width=14) (actual time=0.029..0.030 rows=1.00 loops=1)
+        Index Cond: (user_id = '00000000-0000-0000-0000-000000000001'::uuid)
+        Filter: (consumed_at IS NULL)
+        Index Searches: 1
+        Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=97
+Planning Time: 0.663 ms
+Execution Time: 0.315 ms
+
+=== W6 run 3 ===
+Update on email_verification_tokens  (cost=0.14..8.16 rows=0 width=0) (actual time=0.132..0.132 rows=0.00 loops=1)
+  Buffers: shared hit=14
+  ->  Index Scan using email_verification_tokens_user_active_idx on email_verification_tokens  (cost=0.14..8.16 rows=1 width=14) (actual time=0.020..0.021 rows=1.00 loops=1)
+        Index Cond: (user_id = '00000000-0000-0000-0000-000000000001'::uuid)
+        Filter: (consumed_at IS NULL)
+        Index Searches: 1
+        Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=97
+Planning Time: 0.733 ms
+Execution Time: 0.267 ms
+

@@ -1,0 +1,66 @@
+=== R4 run 1 ===
+LockRows  (cost=8.31..12.76 rows=1 width=67) (actual time=0.098..0.099 rows=1.00 loops=1)
+  Buffers: shared hit=7
+  ->  Merge Join  (cost=8.31..12.75 rows=1 width=67) (actual time=0.076..0.077 rows=1.00 loops=1)
+        Merge Cond: (t.user_id = u.id)
+        Buffers: shared hit=5
+        ->  Sort  (cost=8.16..8.17 rows=1 width=54) (actual time=0.063..0.064 rows=1.00 loops=1)
+              Sort Key: t.user_id
+              Sort Method: quicksort  Memory: 25kB
+              Buffers: shared hit=3
+              ->  Index Scan using password_reset_tokens_token_hash_key on password_reset_tokens t  (cost=0.14..8.15 rows=1 width=54) (actual time=0.038..0.042 rows=1.00 loops=1)
+                    Index Cond: (token_hash = 'password_reset_hash_001'::text)
+                    Index Searches: 1
+                    Buffers: shared hit=3
+        ->  Index Scan using users_pkey on users u  (cost=0.14..14.64 rows=100 width=29) (actual time=0.009..0.009 rows=1.00 loops=1)
+              Index Searches: 1
+              Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=278
+Planning Time: 1.494 ms
+Execution Time: 0.188 ms
+
+=== R4 run 2 ===
+LockRows  (cost=8.31..12.76 rows=1 width=67) (actual time=0.056..0.057 rows=1.00 loops=1)
+  Buffers: shared hit=6
+  ->  Merge Join  (cost=8.31..12.75 rows=1 width=67) (actual time=0.037..0.038 rows=1.00 loops=1)
+        Merge Cond: (t.user_id = u.id)
+        Buffers: shared hit=4
+        ->  Sort  (cost=8.16..8.17 rows=1 width=54) (actual time=0.030..0.030 rows=1.00 loops=1)
+              Sort Key: t.user_id
+              Sort Method: quicksort  Memory: 25kB
+              Buffers: shared hit=2
+              ->  Index Scan using password_reset_tokens_token_hash_key on password_reset_tokens t  (cost=0.14..8.15 rows=1 width=54) (actual time=0.017..0.017 rows=1.00 loops=1)
+                    Index Cond: (token_hash = 'password_reset_hash_001'::text)
+                    Index Searches: 1
+                    Buffers: shared hit=2
+        ->  Index Scan using users_pkey on users u  (cost=0.14..14.64 rows=100 width=29) (actual time=0.005..0.005 rows=1.00 loops=1)
+              Index Searches: 1
+              Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=278
+Planning Time: 0.979 ms
+Execution Time: 0.111 ms
+
+=== R4 run 3 ===
+LockRows  (cost=8.31..12.76 rows=1 width=67) (actual time=0.072..0.073 rows=1.00 loops=1)
+  Buffers: shared hit=6
+  ->  Merge Join  (cost=8.31..12.75 rows=1 width=67) (actual time=0.047..0.048 rows=1.00 loops=1)
+        Merge Cond: (t.user_id = u.id)
+        Buffers: shared hit=4
+        ->  Sort  (cost=8.16..8.17 rows=1 width=54) (actual time=0.039..0.039 rows=1.00 loops=1)
+              Sort Key: t.user_id
+              Sort Method: quicksort  Memory: 25kB
+              Buffers: shared hit=2
+              ->  Index Scan using password_reset_tokens_token_hash_key on password_reset_tokens t  (cost=0.14..8.15 rows=1 width=54) (actual time=0.021..0.021 rows=1.00 loops=1)
+                    Index Cond: (token_hash = 'password_reset_hash_001'::text)
+                    Index Searches: 1
+                    Buffers: shared hit=2
+        ->  Index Scan using users_pkey on users u  (cost=0.14..14.64 rows=100 width=29) (actual time=0.006..0.006 rows=1.00 loops=1)
+              Index Searches: 1
+              Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=278
+Planning Time: 1.021 ms
+Execution Time: 0.131 ms
+

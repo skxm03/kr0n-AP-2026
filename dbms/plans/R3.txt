@@ -1,0 +1,48 @@
+=== R3 run 1 ===
+Nested Loop  (cost=0.29..16.33 rows=1 width=173) (actual time=0.040..0.041 rows=1.00 loops=1)
+  Buffers: shared hit=4
+  ->  Index Scan using users_pkey on users u  (cost=0.14..8.16 rows=1 width=112) (actual time=0.013..0.013 rows=1.00 loops=1)
+        Index Cond: (id = '00000000-0000-0000-0000-000000000001'::uuid)
+        Index Searches: 1
+        Buffers: shared hit=2
+  ->  Index Scan using password_credentials_pkey on password_credentials p  (cost=0.14..8.16 rows=1 width=77) (actual time=0.025..0.026 rows=1.00 loops=1)
+        Index Cond: (user_id = '00000000-0000-0000-0000-000000000001'::uuid)
+        Index Searches: 1
+        Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=156
+Planning Time: 0.801 ms
+Execution Time: 0.097 ms
+
+=== R3 run 2 ===
+Nested Loop  (cost=0.29..16.33 rows=1 width=173) (actual time=0.021..0.021 rows=1.00 loops=1)
+  Buffers: shared hit=4
+  ->  Index Scan using users_pkey on users u  (cost=0.14..8.16 rows=1 width=112) (actual time=0.011..0.011 rows=1.00 loops=1)
+        Index Cond: (id = '00000000-0000-0000-0000-000000000001'::uuid)
+        Index Searches: 1
+        Buffers: shared hit=2
+  ->  Index Scan using password_credentials_pkey on password_credentials p  (cost=0.14..8.16 rows=1 width=77) (actual time=0.008..0.009 rows=1.00 loops=1)
+        Index Cond: (user_id = '00000000-0000-0000-0000-000000000001'::uuid)
+        Index Searches: 1
+        Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=156
+Planning Time: 0.841 ms
+Execution Time: 0.061 ms
+
+=== R3 run 3 ===
+Nested Loop  (cost=0.29..16.33 rows=1 width=173) (actual time=0.033..0.035 rows=1.00 loops=1)
+  Buffers: shared hit=4
+  ->  Index Scan using users_pkey on users u  (cost=0.14..8.16 rows=1 width=112) (actual time=0.017..0.017 rows=1.00 loops=1)
+        Index Cond: (id = '00000000-0000-0000-0000-000000000001'::uuid)
+        Index Searches: 1
+        Buffers: shared hit=2
+  ->  Index Scan using password_credentials_pkey on password_credentials p  (cost=0.14..8.16 rows=1 width=77) (actual time=0.015..0.015 rows=1.00 loops=1)
+        Index Cond: (user_id = '00000000-0000-0000-0000-000000000001'::uuid)
+        Index Searches: 1
+        Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=156
+Planning Time: 0.874 ms
+Execution Time: 0.099 ms
+

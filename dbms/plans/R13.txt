@@ -1,0 +1,36 @@
+=== R13 run 1 ===
+Index Scan using org_memberships_user_idx on organization_memberships  (cost=0.14..8.16 rows=1 width=6) (actual time=0.010..0.010 rows=0.00 loops=1)
+  Index Cond: (user_id = '00000000-0000-0000-0000-000000000001'::uuid)
+  Filter: (organization_id = '10000000-0000-0000-0000-000000000001'::uuid)
+  Rows Removed by Filter: 1
+  Index Searches: 1
+  Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=94
+Planning Time: 0.958 ms
+Execution Time: 0.038 ms
+
+=== R13 run 2 ===
+Index Scan using org_memberships_user_idx on organization_memberships  (cost=0.14..8.16 rows=1 width=6) (actual time=0.014..0.014 rows=0.00 loops=1)
+  Index Cond: (user_id = '00000000-0000-0000-0000-000000000001'::uuid)
+  Filter: (organization_id = '10000000-0000-0000-0000-000000000001'::uuid)
+  Rows Removed by Filter: 1
+  Index Searches: 1
+  Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=94
+Planning Time: 0.742 ms
+Execution Time: 0.054 ms
+
+=== R13 run 3 ===
+Index Scan using org_memberships_user_idx on organization_memberships  (cost=0.14..8.16 rows=1 width=6) (actual time=0.012..0.012 rows=0.00 loops=1)
+  Index Cond: (user_id = '00000000-0000-0000-0000-000000000001'::uuid)
+  Filter: (organization_id = '10000000-0000-0000-0000-000000000001'::uuid)
+  Rows Removed by Filter: 1
+  Index Searches: 1
+  Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=94
+Planning Time: 0.536 ms
+Execution Time: 0.056 ms
+

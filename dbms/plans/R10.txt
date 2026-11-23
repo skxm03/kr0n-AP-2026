@@ -1,0 +1,30 @@
+=== R10 run 1 ===
+Index Scan using refresh_token_history_pkey on refresh_token_history  (cost=0.14..8.15 rows=1 width=16) (actual time=0.031..0.032 rows=1.00 loops=1)
+  Index Cond: (token_hash = 'old_rotated_token_hash_001'::text)
+  Index Searches: 1
+  Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=96
+Planning Time: 0.863 ms
+Execution Time: 0.092 ms
+
+=== R10 run 2 ===
+Index Scan using refresh_token_history_pkey on refresh_token_history  (cost=0.14..8.15 rows=1 width=16) (actual time=0.026..0.027 rows=1.00 loops=1)
+  Index Cond: (token_hash = 'old_rotated_token_hash_001'::text)
+  Index Searches: 1
+  Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=96
+Planning Time: 0.741 ms
+Execution Time: 0.094 ms
+
+=== R10 run 3 ===
+Index Scan using refresh_token_history_pkey on refresh_token_history  (cost=0.14..8.15 rows=1 width=16) (actual time=0.025..0.025 rows=1.00 loops=1)
+  Index Cond: (token_hash = 'old_rotated_token_hash_001'::text)
+  Index Searches: 1
+  Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=96
+Planning Time: 0.630 ms
+Execution Time: 0.077 ms
+

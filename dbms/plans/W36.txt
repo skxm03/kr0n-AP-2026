@@ -1,0 +1,30 @@
+=== W36 run 1 ===
+Insert on organization_memberships  (cost=0.00..0.01 rows=0 width=0) (actual time=0.406..0.407 rows=0.00 loops=1)
+  Buffers: shared hit=63
+  ->  Result  (cost=0.00..0.01 rows=1 width=96) (actual time=0.003..0.003 rows=1.00 loops=1)
+Planning Time: 0.041 ms
+Trigger for constraint organization_memberships_organization_id_fkey: time=0.720 calls=1
+Trigger for constraint organization_memberships_user_id_fkey: time=0.421 calls=1
+Trigger for constraint organization_memberships_role_id_fkey: time=0.386 calls=1
+Execution Time: 1.969 ms
+
+=== W36 run 2 ===
+Insert on organization_memberships  (cost=0.00..0.01 rows=0 width=0) (actual time=0.397..0.397 rows=0.00 loops=1)
+  Buffers: shared hit=65
+  ->  Result  (cost=0.00..0.01 rows=1 width=96) (actual time=0.003..0.004 rows=1.00 loops=1)
+Planning Time: 0.057 ms
+Trigger for constraint organization_memberships_organization_id_fkey: time=0.733 calls=1
+Trigger for constraint organization_memberships_user_id_fkey: time=0.313 calls=1
+Trigger for constraint organization_memberships_role_id_fkey: time=0.252 calls=1
+Execution Time: 1.742 ms
+
+=== W36 run 3 ===
+Insert on organization_memberships  (cost=0.00..0.01 rows=0 width=0) (actual time=0.308..0.309 rows=0.00 loops=1)
+  Buffers: shared hit=65
+  ->  Result  (cost=0.00..0.01 rows=1 width=96) (actual time=0.003..0.004 rows=1.00 loops=1)
+Planning Time: 0.054 ms
+Trigger for constraint organization_memberships_organization_id_fkey: time=0.767 calls=1
+Trigger for constraint organization_memberships_user_id_fkey: time=0.351 calls=1
+Trigger for constraint organization_memberships_role_id_fkey: time=0.282 calls=1
+Execution Time: 1.767 ms
+

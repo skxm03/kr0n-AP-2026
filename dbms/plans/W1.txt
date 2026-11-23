@@ -1,0 +1,27 @@
+=== W1 run 1 ===
+Insert on users  (cost=0.00..0.01 rows=0 width=0) (actual time=0.727..0.728 rows=0.00 loops=1)
+  Buffers: shared hit=71
+  ->  Result  (cost=0.00..0.01 rows=1 width=180) (actual time=0.005..0.006 rows=1.00 loops=1)
+Planning:
+  Buffers: shared hit=3
+Planning Time: 0.069 ms
+Execution Time: 0.780 ms
+
+=== W1 run 2 ===
+Insert on users  (cost=0.00..0.01 rows=0 width=0) (actual time=0.407..0.407 rows=0.00 loops=1)
+  Buffers: shared hit=73
+  ->  Result  (cost=0.00..0.01 rows=1 width=180) (actual time=0.004..0.005 rows=1.00 loops=1)
+Planning:
+  Buffers: shared hit=3
+Planning Time: 0.102 ms
+Execution Time: 0.493 ms
+
+=== W1 run 3 ===
+Insert on users  (cost=0.00..0.01 rows=0 width=0) (actual time=0.276..0.276 rows=0.00 loops=1)
+  Buffers: shared hit=73
+  ->  Result  (cost=0.00..0.01 rows=1 width=180) (actual time=0.003..0.004 rows=1.00 loops=1)
+Planning:
+  Buffers: shared hit=3
+Planning Time: 0.042 ms
+Execution Time: 0.319 ms
+

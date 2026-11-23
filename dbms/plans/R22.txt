@@ -1,0 +1,54 @@
+=== R22 run 1 ===
+LockRows  (cost=4.20..6.32 rows=2 width=22) (actual time=0.053..0.062 rows=2.00 loops=1)
+  Buffers: shared hit=5
+  ->  Bitmap Heap Scan on organization_memberships  (cost=4.20..6.30 rows=2 width=22) (actual time=0.034..0.042 rows=2.00 loops=1)
+        Recheck Cond: (organization_id = '10000000-0000-0000-0000-000000000001'::uuid)
+        Filter: (role_id = 'owner'::text)
+        Rows Removed by Filter: 5
+        Heap Blocks: exact=2
+        Buffers: shared hit=3
+        ->  Bitmap Index Scan on org_memberships_org_user_key  (cost=0.00..4.20 rows=7 width=0) (actual time=0.010..0.010 rows=9.00 loops=1)
+              Index Cond: (organization_id = '10000000-0000-0000-0000-000000000001'::uuid)
+              Index Searches: 1
+              Buffers: shared hit=1
+Planning:
+  Buffers: shared hit=105
+Planning Time: 0.810 ms
+Execution Time: 0.101 ms
+
+=== R22 run 2 ===
+LockRows  (cost=4.20..6.32 rows=2 width=22) (actual time=0.056..0.061 rows=2.00 loops=1)
+  Buffers: shared hit=5
+  ->  Bitmap Heap Scan on organization_memberships  (cost=4.20..6.30 rows=2 width=22) (actual time=0.024..0.029 rows=2.00 loops=1)
+        Recheck Cond: (organization_id = '10000000-0000-0000-0000-000000000001'::uuid)
+        Filter: (role_id = 'owner'::text)
+        Rows Removed by Filter: 5
+        Heap Blocks: exact=2
+        Buffers: shared hit=3
+        ->  Bitmap Index Scan on org_memberships_org_user_key  (cost=0.00..4.20 rows=7 width=0) (actual time=0.008..0.008 rows=9.00 loops=1)
+              Index Cond: (organization_id = '10000000-0000-0000-0000-000000000001'::uuid)
+              Index Searches: 1
+              Buffers: shared hit=1
+Planning:
+  Buffers: shared hit=105
+Planning Time: 0.553 ms
+Execution Time: 0.097 ms
+
+=== R22 run 3 ===
+LockRows  (cost=4.20..6.32 rows=2 width=22) (actual time=0.060..0.064 rows=2.00 loops=1)
+  Buffers: shared hit=5
+  ->  Bitmap Heap Scan on organization_memberships  (cost=4.20..6.30 rows=2 width=22) (actual time=0.033..0.037 rows=2.00 loops=1)
+        Recheck Cond: (organization_id = '10000000-0000-0000-0000-000000000001'::uuid)
+        Filter: (role_id = 'owner'::text)
+        Rows Removed by Filter: 5
+        Heap Blocks: exact=2
+        Buffers: shared hit=3
+        ->  Bitmap Index Scan on org_memberships_org_user_key  (cost=0.00..4.20 rows=7 width=0) (actual time=0.011..0.011 rows=9.00 loops=1)
+              Index Cond: (organization_id = '10000000-0000-0000-0000-000000000001'::uuid)
+              Index Searches: 1
+              Buffers: shared hit=1
+Planning:
+  Buffers: shared hit=105
+Planning Time: 0.616 ms
+Execution Time: 0.105 ms
+

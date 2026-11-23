@@ -1,0 +1,48 @@
+=== W46 run 1 ===
+Insert on organization_memberships  (cost=0.00..0.01 rows=0 width=0) (actual time=0.293..0.293 rows=0.00 loops=1)
+  Conflict Resolution: NOTHING
+  Conflict Arbiter Indexes: org_memberships_org_user_key
+  Tuples Inserted: 1
+  Conflicting Tuples: 0
+  Buffers: shared hit=18
+  ->  Result  (cost=0.00..0.01 rows=1 width=96) (actual time=0.006..0.007 rows=1.00 loops=1)
+Planning:
+  Buffers: shared hit=55
+Planning Time: 0.130 ms
+Trigger for constraint organization_memberships_organization_id_fkey: time=0.680 calls=1
+Trigger for constraint organization_memberships_user_id_fkey: time=0.410 calls=1
+Trigger for constraint organization_memberships_role_id_fkey: time=0.294 calls=1
+Execution Time: 1.724 ms
+
+=== W46 run 2 ===
+Insert on organization_memberships  (cost=0.00..0.01 rows=0 width=0) (actual time=0.320..0.321 rows=0.00 loops=1)
+  Conflict Resolution: NOTHING
+  Conflict Arbiter Indexes: org_memberships_org_user_key
+  Tuples Inserted: 1
+  Conflicting Tuples: 0
+  Buffers: shared hit=20
+  ->  Result  (cost=0.00..0.01 rows=1 width=96) (actual time=0.004..0.004 rows=1.00 loops=1)
+Planning:
+  Buffers: shared hit=55
+Planning Time: 0.170 ms
+Trigger for constraint organization_memberships_organization_id_fkey: time=0.832 calls=1
+Trigger for constraint organization_memberships_user_id_fkey: time=0.487 calls=1
+Trigger for constraint organization_memberships_role_id_fkey: time=0.398 calls=1
+Execution Time: 2.088 ms
+
+=== W46 run 3 ===
+Insert on organization_memberships  (cost=0.00..0.01 rows=0 width=0) (actual time=0.208..0.209 rows=0.00 loops=1)
+  Conflict Resolution: NOTHING
+  Conflict Arbiter Indexes: org_memberships_org_user_key
+  Tuples Inserted: 1
+  Conflicting Tuples: 0
+  Buffers: shared hit=20
+  ->  Result  (cost=0.00..0.01 rows=1 width=96) (actual time=0.003..0.003 rows=1.00 loops=1)
+Planning:
+  Buffers: shared hit=55
+Planning Time: 0.100 ms
+Trigger for constraint organization_memberships_organization_id_fkey: time=0.659 calls=1
+Trigger for constraint organization_memberships_user_id_fkey: time=0.433 calls=1
+Trigger for constraint organization_memberships_role_id_fkey: time=0.312 calls=1
+Execution Time: 1.648 ms
+

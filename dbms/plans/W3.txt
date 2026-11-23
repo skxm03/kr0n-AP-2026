@@ -1,0 +1,24 @@
+=== W3 run 1 ===
+Insert on email_verification_tokens  (cost=0.00..0.02 rows=0 width=0) (actual time=1.102..1.103 rows=0.00 loops=1)
+  Buffers: shared hit=65
+  ->  Result  (cost=0.00..0.02 rows=1 width=88) (actual time=0.035..0.035 rows=1.00 loops=1)
+Planning Time: 0.118 ms
+Trigger for constraint email_verification_tokens_user_id_fkey: time=0.896 calls=1
+Execution Time: 2.077 ms
+
+=== W3 run 2 ===
+Insert on email_verification_tokens  (cost=0.00..0.02 rows=0 width=0) (actual time=0.411..0.411 rows=0.00 loops=1)
+  Buffers: shared hit=67
+  ->  Result  (cost=0.00..0.02 rows=1 width=88) (actual time=0.017..0.017 rows=1.00 loops=1)
+Planning Time: 0.085 ms
+Trigger for constraint email_verification_tokens_user_id_fkey: time=1.047 calls=1
+Execution Time: 1.516 ms
+
+=== W3 run 3 ===
+Insert on email_verification_tokens  (cost=0.00..0.02 rows=0 width=0) (actual time=0.300..0.301 rows=0.00 loops=1)
+  Buffers: shared hit=67
+  ->  Result  (cost=0.00..0.02 rows=1 width=88) (actual time=0.012..0.012 rows=1.00 loops=1)
+Planning Time: 0.070 ms
+Trigger for constraint email_verification_tokens_user_id_fkey: time=0.757 calls=1
+Execution Time: 1.098 ms
+

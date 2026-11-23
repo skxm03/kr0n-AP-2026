@@ -1,0 +1,42 @@
+=== W42 run 1 ===
+Update on api_tokens  (cost=0.14..12.74 rows=0 width=0) (actual time=0.221..0.221 rows=0.00 loops=1)
+  Buffers: shared hit=35
+  ->  Index Scan using api_tokens_creator_idx on api_tokens  (cost=0.14..12.74 rows=3 width=14) (actual time=0.025..0.029 rows=3.00 loops=1)
+        Index Cond: (created_by_user_id = '00000000-0000-0000-0000-000000000001'::uuid)
+        Filter: (organization_id = '10000000-0000-0000-0000-000000000001'::uuid)
+        Rows Removed by Filter: 27
+        Index Searches: 1
+        Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=119
+Planning Time: 0.661 ms
+Execution Time: 0.366 ms
+
+=== W42 run 2 ===
+Update on api_tokens  (cost=0.14..12.74 rows=0 width=0) (actual time=0.269..0.269 rows=0.00 loops=1)
+  Buffers: shared hit=40
+  ->  Index Scan using api_tokens_creator_idx on api_tokens  (cost=0.14..12.74 rows=3 width=14) (actual time=0.028..0.040 rows=3.00 loops=1)
+        Index Cond: (created_by_user_id = '00000000-0000-0000-0000-000000000001'::uuid)
+        Filter: (organization_id = '10000000-0000-0000-0000-000000000001'::uuid)
+        Rows Removed by Filter: 27
+        Index Searches: 1
+        Buffers: shared hit=3
+Planning:
+  Buffers: shared hit=119
+Planning Time: 0.858 ms
+Execution Time: 0.444 ms
+
+=== W42 run 3 ===
+Update on api_tokens  (cost=0.14..12.74 rows=0 width=0) (actual time=0.256..0.256 rows=0.00 loops=1)
+  Buffers: shared hit=40
+  ->  Index Scan using api_tokens_creator_idx on api_tokens  (cost=0.14..12.74 rows=3 width=14) (actual time=0.049..0.060 rows=3.00 loops=1)
+        Index Cond: (created_by_user_id = '00000000-0000-0000-0000-000000000001'::uuid)
+        Filter: (organization_id = '10000000-0000-0000-0000-000000000001'::uuid)
+        Rows Removed by Filter: 27
+        Index Searches: 1
+        Buffers: shared hit=3
+Planning:
+  Buffers: shared hit=119
+Planning Time: 0.712 ms
+Execution Time: 0.415 ms
+

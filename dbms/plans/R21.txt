@@ -1,0 +1,54 @@
+=== R21 run 1 ===
+LockRows  (cost=4.16..6.20 rows=1 width=12) (actual time=0.068..0.069 rows=1.00 loops=1)
+  Buffers: shared hit=4
+  ->  Bitmap Heap Scan on organization_memberships  (cost=4.16..6.19 rows=1 width=12) (actual time=0.047..0.047 rows=1.00 loops=1)
+        Recheck Cond: (user_id = '00000000-0000-0000-0000-000000000004'::uuid)
+        Filter: (organization_id = '10000000-0000-0000-0000-000000000001'::uuid)
+        Rows Removed by Filter: 1
+        Heap Blocks: exact=2
+        Buffers: shared hit=3
+        ->  Bitmap Index Scan on org_memberships_user_idx  (cost=0.00..4.16 rows=2 width=0) (actual time=0.011..0.011 rows=2.00 loops=1)
+              Index Cond: (user_id = '00000000-0000-0000-0000-000000000004'::uuid)
+              Index Searches: 1
+              Buffers: shared hit=1
+Planning:
+  Buffers: shared hit=97
+Planning Time: 0.715 ms
+Execution Time: 0.121 ms
+
+=== R21 run 2 ===
+LockRows  (cost=4.16..6.20 rows=1 width=12) (actual time=0.081..0.082 rows=1.00 loops=1)
+  Buffers: shared hit=4
+  ->  Bitmap Heap Scan on organization_memberships  (cost=4.16..6.19 rows=1 width=12) (actual time=0.051..0.052 rows=1.00 loops=1)
+        Recheck Cond: (user_id = '00000000-0000-0000-0000-000000000004'::uuid)
+        Filter: (organization_id = '10000000-0000-0000-0000-000000000001'::uuid)
+        Rows Removed by Filter: 1
+        Heap Blocks: exact=2
+        Buffers: shared hit=3
+        ->  Bitmap Index Scan on org_memberships_user_idx  (cost=0.00..4.16 rows=2 width=0) (actual time=0.016..0.016 rows=2.00 loops=1)
+              Index Cond: (user_id = '00000000-0000-0000-0000-000000000004'::uuid)
+              Index Searches: 1
+              Buffers: shared hit=1
+Planning:
+  Buffers: shared hit=97
+Planning Time: 0.544 ms
+Execution Time: 0.136 ms
+
+=== R21 run 3 ===
+LockRows  (cost=4.16..6.20 rows=1 width=12) (actual time=0.062..0.063 rows=1.00 loops=1)
+  Buffers: shared hit=4
+  ->  Bitmap Heap Scan on organization_memberships  (cost=4.16..6.19 rows=1 width=12) (actual time=0.033..0.034 rows=1.00 loops=1)
+        Recheck Cond: (user_id = '00000000-0000-0000-0000-000000000004'::uuid)
+        Filter: (organization_id = '10000000-0000-0000-0000-000000000001'::uuid)
+        Rows Removed by Filter: 1
+        Heap Blocks: exact=2
+        Buffers: shared hit=3
+        ->  Bitmap Index Scan on org_memberships_user_idx  (cost=0.00..4.16 rows=2 width=0) (actual time=0.009..0.009 rows=2.00 loops=1)
+              Index Cond: (user_id = '00000000-0000-0000-0000-000000000004'::uuid)
+              Index Searches: 1
+              Buffers: shared hit=1
+Planning:
+  Buffers: shared hit=97
+Planning Time: 0.566 ms
+Execution Time: 0.105 ms
+

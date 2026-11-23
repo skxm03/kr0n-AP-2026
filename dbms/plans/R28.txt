@@ -1,0 +1,60 @@
+=== R28 run 1 ===
+Merge Join  (cost=8.31..8.44 rows=1 width=185) (actual time=0.042..0.043 rows=1.00 loops=1)
+  Merge Cond: (t.created_by_user_id = u.id)
+  Buffers: shared hit=4
+  ->  Sort  (cost=8.16..8.17 rows=1 width=178) (actual time=0.031..0.031 rows=1.00 loops=1)
+        Sort Key: t.created_by_user_id
+        Sort Method: quicksort  Memory: 25kB
+        Buffers: shared hit=2
+        ->  Index Scan using api_tokens_token_hash_key on api_tokens t  (cost=0.14..8.15 rows=1 width=178) (actual time=0.018..0.018 rows=1.00 loops=1)
+              Index Cond: (token_hash = 'api_token_hash_001'::text)
+              Index Searches: 1
+              Buffers: shared hit=2
+  ->  Index Scan using users_pkey on users u  (cost=0.14..16.39 rows=150 width=23) (actual time=0.008..0.008 rows=1.00 loops=1)
+        Index Searches: 1
+        Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=311
+Planning Time: 1.165 ms
+Execution Time: 0.107 ms
+
+=== R28 run 2 ===
+Merge Join  (cost=8.31..8.44 rows=1 width=185) (actual time=0.074..0.075 rows=1.00 loops=1)
+  Merge Cond: (t.created_by_user_id = u.id)
+  Buffers: shared hit=4
+  ->  Sort  (cost=8.16..8.17 rows=1 width=178) (actual time=0.057..0.058 rows=1.00 loops=1)
+        Sort Key: t.created_by_user_id
+        Sort Method: quicksort  Memory: 25kB
+        Buffers: shared hit=2
+        ->  Index Scan using api_tokens_token_hash_key on api_tokens t  (cost=0.14..8.15 rows=1 width=178) (actual time=0.034..0.035 rows=1.00 loops=1)
+              Index Cond: (token_hash = 'api_token_hash_001'::text)
+              Index Searches: 1
+              Buffers: shared hit=2
+  ->  Index Scan using users_pkey on users u  (cost=0.14..16.39 rows=150 width=23) (actual time=0.011..0.011 rows=1.00 loops=1)
+        Index Searches: 1
+        Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=311
+Planning Time: 1.157 ms
+Execution Time: 0.179 ms
+
+=== R28 run 3 ===
+Merge Join  (cost=8.31..8.44 rows=1 width=185) (actual time=0.043..0.044 rows=1.00 loops=1)
+  Merge Cond: (t.created_by_user_id = u.id)
+  Buffers: shared hit=4
+  ->  Sort  (cost=8.16..8.17 rows=1 width=178) (actual time=0.030..0.031 rows=1.00 loops=1)
+        Sort Key: t.created_by_user_id
+        Sort Method: quicksort  Memory: 25kB
+        Buffers: shared hit=2
+        ->  Index Scan using api_tokens_token_hash_key on api_tokens t  (cost=0.14..8.15 rows=1 width=178) (actual time=0.017..0.018 rows=1.00 loops=1)
+              Index Cond: (token_hash = 'api_token_hash_001'::text)
+              Index Searches: 1
+              Buffers: shared hit=2
+  ->  Index Scan using users_pkey on users u  (cost=0.14..16.39 rows=150 width=23) (actual time=0.009..0.009 rows=1.00 loops=1)
+        Index Searches: 1
+        Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=311
+Planning Time: 1.264 ms
+Execution Time: 0.111 ms
+

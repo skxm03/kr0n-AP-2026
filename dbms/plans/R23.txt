@@ -1,0 +1,75 @@
+=== R23 run 1 ===
+Result  (cost=14.53..14.54 rows=1 width=1) (actual time=0.036..0.037 rows=1.00 loops=1)
+  Buffers: shared hit=5
+  InitPlan 1
+    ->  Nested Loop  (cost=4.34..14.53 rows=1 width=0) (actual time=0.035..0.035 rows=0.00 loops=1)
+          Join Filter: (om.user_id = u.id)
+          Rows Removed by Join Filter: 7
+          Buffers: shared hit=5
+          ->  Index Scan using users_email_key on users u  (cost=0.14..8.16 rows=1 width=16) (actual time=0.015..0.016 rows=1.00 loops=1)
+                Index Cond: (email = 'user1@kr0n.dev'::text)
+                Index Searches: 1
+                Buffers: shared hit=2
+          ->  Bitmap Heap Scan on organization_memberships om  (cost=4.20..6.28 rows=7 width=16) (actual time=0.016..0.017 rows=7.00 loops=1)
+                Recheck Cond: (organization_id = '10000000-0000-0000-0000-000000000001'::uuid)
+                Heap Blocks: exact=2
+                Buffers: shared hit=3
+                ->  Bitmap Index Scan on org_memberships_org_user_key  (cost=0.00..4.20 rows=7 width=0) (actual time=0.008..0.008 rows=9.00 loops=1)
+                      Index Cond: (organization_id = '10000000-0000-0000-0000-000000000001'::uuid)
+                      Index Searches: 1
+                      Buffers: shared hit=1
+Planning:
+  Buffers: shared hit=274
+Planning Time: 1.316 ms
+Execution Time: 0.092 ms
+
+=== R23 run 2 ===
+Result  (cost=14.53..14.54 rows=1 width=1) (actual time=0.032..0.032 rows=1.00 loops=1)
+  Buffers: shared hit=5
+  InitPlan 1
+    ->  Nested Loop  (cost=4.34..14.53 rows=1 width=0) (actual time=0.031..0.031 rows=0.00 loops=1)
+          Join Filter: (om.user_id = u.id)
+          Rows Removed by Join Filter: 7
+          Buffers: shared hit=5
+          ->  Index Scan using users_email_key on users u  (cost=0.14..8.16 rows=1 width=16) (actual time=0.011..0.012 rows=1.00 loops=1)
+                Index Cond: (email = 'user1@kr0n.dev'::text)
+                Index Searches: 1
+                Buffers: shared hit=2
+          ->  Bitmap Heap Scan on organization_memberships om  (cost=4.20..6.28 rows=7 width=16) (actual time=0.015..0.017 rows=7.00 loops=1)
+                Recheck Cond: (organization_id = '10000000-0000-0000-0000-000000000001'::uuid)
+                Heap Blocks: exact=2
+                Buffers: shared hit=3
+                ->  Bitmap Index Scan on org_memberships_org_user_key  (cost=0.00..4.20 rows=7 width=0) (actual time=0.006..0.006 rows=9.00 loops=1)
+                      Index Cond: (organization_id = '10000000-0000-0000-0000-000000000001'::uuid)
+                      Index Searches: 1
+                      Buffers: shared hit=1
+Planning:
+  Buffers: shared hit=273
+Planning Time: 1.181 ms
+Execution Time: 0.083 ms
+
+=== R23 run 3 ===
+Result  (cost=14.53..14.54 rows=1 width=1) (actual time=0.051..0.052 rows=1.00 loops=1)
+  Buffers: shared hit=5
+  InitPlan 1
+    ->  Nested Loop  (cost=4.34..14.53 rows=1 width=0) (actual time=0.050..0.051 rows=0.00 loops=1)
+          Join Filter: (om.user_id = u.id)
+          Rows Removed by Join Filter: 7
+          Buffers: shared hit=5
+          ->  Index Scan using users_email_key on users u  (cost=0.14..8.16 rows=1 width=16) (actual time=0.017..0.018 rows=1.00 loops=1)
+                Index Cond: (email = 'user1@kr0n.dev'::text)
+                Index Searches: 1
+                Buffers: shared hit=2
+          ->  Bitmap Heap Scan on organization_memberships om  (cost=4.20..6.28 rows=7 width=16) (actual time=0.026..0.029 rows=7.00 loops=1)
+                Recheck Cond: (organization_id = '10000000-0000-0000-0000-000000000001'::uuid)
+                Heap Blocks: exact=2
+                Buffers: shared hit=3
+                ->  Bitmap Index Scan on org_memberships_org_user_key  (cost=0.00..4.20 rows=7 width=0) (actual time=0.010..0.010 rows=9.00 loops=1)
+                      Index Cond: (organization_id = '10000000-0000-0000-0000-000000000001'::uuid)
+                      Index Searches: 1
+                      Buffers: shared hit=1
+Planning:
+  Buffers: shared hit=273
+Planning Time: 1.891 ms
+Execution Time: 0.121 ms
+

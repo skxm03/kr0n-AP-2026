@@ -1,0 +1,48 @@
+=== R1 run 1 ===
+Nested Loop  (cost=0.29..16.49 rows=1 width=173) (actual time=0.015..0.015 rows=1.00 loops=1)
+  Buffers: shared hit=4
+  ->  Index Scan using users_email_key on users u  (cost=0.14..8.16 rows=1 width=112) (actual time=0.012..0.013 rows=1.00 loops=1)
+        Index Cond: (email = 'user1@kr0n.dev'::text)
+        Index Searches: 1
+        Buffers: shared hit=2
+  ->  Index Scan using password_credentials_pkey on password_credentials p  (cost=0.14..8.16 rows=1 width=77) (actual time=0.001..0.001 rows=1.00 loops=1)
+        Index Cond: (user_id = u.id)
+        Index Searches: 1
+        Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=267
+Planning Time: 1.465 ms
+Execution Time: 0.054 ms
+
+=== R1 run 2 ===
+Nested Loop  (cost=0.29..16.49 rows=1 width=173) (actual time=0.019..0.020 rows=1.00 loops=1)
+  Buffers: shared hit=4
+  ->  Index Scan using users_email_key on users u  (cost=0.14..8.16 rows=1 width=112) (actual time=0.015..0.016 rows=1.00 loops=1)
+        Index Cond: (email = 'user1@kr0n.dev'::text)
+        Index Searches: 1
+        Buffers: shared hit=2
+  ->  Index Scan using password_credentials_pkey on password_credentials p  (cost=0.14..8.16 rows=1 width=77) (actual time=0.001..0.001 rows=1.00 loops=1)
+        Index Cond: (user_id = u.id)
+        Index Searches: 1
+        Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=267
+Planning Time: 1.234 ms
+Execution Time: 0.076 ms
+
+=== R1 run 3 ===
+Nested Loop  (cost=0.29..16.49 rows=1 width=173) (actual time=0.015..0.016 rows=1.00 loops=1)
+  Buffers: shared hit=4
+  ->  Index Scan using users_email_key on users u  (cost=0.14..8.16 rows=1 width=112) (actual time=0.013..0.013 rows=1.00 loops=1)
+        Index Cond: (email = 'user1@kr0n.dev'::text)
+        Index Searches: 1
+        Buffers: shared hit=2
+  ->  Index Scan using password_credentials_pkey on password_credentials p  (cost=0.14..8.16 rows=1 width=77) (actual time=0.001..0.001 rows=1.00 loops=1)
+        Index Cond: (user_id = u.id)
+        Index Searches: 1
+        Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=267
+Planning Time: 0.985 ms
+Execution Time: 0.054 ms
+

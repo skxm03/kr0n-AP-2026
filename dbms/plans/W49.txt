@@ -1,0 +1,42 @@
+=== W49 run 1 ===
+Update on api_tokens  (cost=0.14..8.16 rows=0 width=0) (actual time=0.012..0.013 rows=0.00 loops=1)
+  Buffers: shared hit=2
+  ->  Index Scan using api_tokens_pkey on api_tokens  (cost=0.14..8.16 rows=1 width=14) (actual time=0.012..0.012 rows=0.00 loops=1)
+        Index Cond: (id = '70000000-0000-0000-0000-000000000001'::uuid)
+        Filter: (organization_id = '10000000-0000-0000-0000-000000000001'::uuid)
+        Rows Removed by Filter: 1
+        Index Searches: 1
+        Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=119
+Planning Time: 0.722 ms
+Execution Time: 0.180 ms
+
+=== W49 run 2 ===
+Update on api_tokens  (cost=0.14..8.16 rows=0 width=0) (actual time=0.011..0.012 rows=0.00 loops=1)
+  Buffers: shared hit=2
+  ->  Index Scan using api_tokens_pkey on api_tokens  (cost=0.14..8.16 rows=1 width=14) (actual time=0.010..0.011 rows=0.00 loops=1)
+        Index Cond: (id = '70000000-0000-0000-0000-000000000001'::uuid)
+        Filter: (organization_id = '10000000-0000-0000-0000-000000000001'::uuid)
+        Rows Removed by Filter: 1
+        Index Searches: 1
+        Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=119
+Planning Time: 0.610 ms
+Execution Time: 0.125 ms
+
+=== W49 run 3 ===
+Update on api_tokens  (cost=0.14..8.16 rows=0 width=0) (actual time=0.009..0.009 rows=0.00 loops=1)
+  Buffers: shared hit=2
+  ->  Index Scan using api_tokens_pkey on api_tokens  (cost=0.14..8.16 rows=1 width=14) (actual time=0.008..0.008 rows=0.00 loops=1)
+        Index Cond: (id = '70000000-0000-0000-0000-000000000001'::uuid)
+        Filter: (organization_id = '10000000-0000-0000-0000-000000000001'::uuid)
+        Rows Removed by Filter: 1
+        Index Searches: 1
+        Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=119
+Planning Time: 0.713 ms
+Execution Time: 0.099 ms
+

@@ -1,0 +1,39 @@
+=== W8 run 1 ===
+Update on password_reset_tokens  (cost=0.14..8.15 rows=0 width=0) (actual time=0.205..0.205 rows=0.00 loops=1)
+  Buffers: shared hit=12
+  ->  Index Scan using password_reset_tokens_user_active_idx on password_reset_tokens  (cost=0.14..8.15 rows=1 width=14) (actual time=0.038..0.039 rows=1.00 loops=1)
+        Index Cond: (user_id = '00000000-0000-0000-0000-000000000001'::uuid)
+        Filter: (consumed_at IS NULL)
+        Index Searches: 1
+        Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=96
+Planning Time: 1.094 ms
+Execution Time: 0.361 ms
+
+=== W8 run 2 ===
+Update on password_reset_tokens  (cost=0.14..8.15 rows=0 width=0) (actual time=0.162..0.162 rows=0.00 loops=1)
+  Buffers: shared hit=14
+  ->  Index Scan using password_reset_tokens_user_active_idx on password_reset_tokens  (cost=0.14..8.15 rows=1 width=14) (actual time=0.033..0.034 rows=1.00 loops=1)
+        Index Cond: (user_id = '00000000-0000-0000-0000-000000000001'::uuid)
+        Filter: (consumed_at IS NULL)
+        Index Searches: 1
+        Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=96
+Planning Time: 0.598 ms
+Execution Time: 0.309 ms
+
+=== W8 run 3 ===
+Update on password_reset_tokens  (cost=0.14..8.15 rows=0 width=0) (actual time=0.166..0.167 rows=0.00 loops=1)
+  Buffers: shared hit=14
+  ->  Index Scan using password_reset_tokens_user_active_idx on password_reset_tokens  (cost=0.14..8.15 rows=1 width=14) (actual time=0.033..0.033 rows=1.00 loops=1)
+        Index Cond: (user_id = '00000000-0000-0000-0000-000000000001'::uuid)
+        Filter: (consumed_at IS NULL)
+        Index Searches: 1
+        Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=96
+Planning Time: 0.739 ms
+Execution Time: 0.304 ms
+

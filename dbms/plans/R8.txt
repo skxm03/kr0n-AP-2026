@@ -1,0 +1,30 @@
+=== R8 run 1 ===
+Index Scan using sessions_token_hash_key on sessions  (cost=0.14..8.16 rows=1 width=164) (actual time=0.035..0.036 rows=1.00 loops=1)
+  Index Cond: (token_hash = 'token_hash_sess_001'::text)
+  Index Searches: 1
+  Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=125
+Planning Time: 0.617 ms
+Execution Time: 0.081 ms
+
+=== R8 run 2 ===
+Index Scan using sessions_token_hash_key on sessions  (cost=0.14..8.16 rows=1 width=164) (actual time=0.032..0.033 rows=1.00 loops=1)
+  Index Cond: (token_hash = 'token_hash_sess_001'::text)
+  Index Searches: 1
+  Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=125
+Planning Time: 0.687 ms
+Execution Time: 0.093 ms
+
+=== R8 run 3 ===
+Index Scan using sessions_token_hash_key on sessions  (cost=0.14..8.16 rows=1 width=164) (actual time=0.034..0.034 rows=1.00 loops=1)
+  Index Cond: (token_hash = 'token_hash_sess_001'::text)
+  Index Searches: 1
+  Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=125
+Planning Time: 0.663 ms
+Execution Time: 0.095 ms
+

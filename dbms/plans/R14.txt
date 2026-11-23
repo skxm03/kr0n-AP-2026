@@ -1,0 +1,33 @@
+=== R14 run 1 ===
+Index Only Scan using role_permissions_pkey on role_permissions  (cost=0.14..8.35 rows=12 width=12) (actual time=0.068..0.070 rows=12.00 loops=1)
+  Index Cond: (role_id = 'owner'::text)
+  Heap Fetches: 12
+  Index Searches: 1
+  Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=86
+Planning Time: 1.235 ms
+Execution Time: 0.106 ms
+
+=== R14 run 2 ===
+Index Only Scan using role_permissions_pkey on role_permissions  (cost=0.14..8.35 rows=12 width=12) (actual time=0.024..0.027 rows=12.00 loops=1)
+  Index Cond: (role_id = 'owner'::text)
+  Heap Fetches: 12
+  Index Searches: 1
+  Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=86
+Planning Time: 0.513 ms
+Execution Time: 0.056 ms
+
+=== R14 run 3 ===
+Index Only Scan using role_permissions_pkey on role_permissions  (cost=0.14..8.35 rows=12 width=12) (actual time=0.044..0.047 rows=12.00 loops=1)
+  Index Cond: (role_id = 'owner'::text)
+  Heap Fetches: 12
+  Index Searches: 1
+  Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=86
+Planning Time: 0.663 ms
+Execution Time: 0.087 ms
+

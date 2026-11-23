@@ -1,0 +1,24 @@
+=== W26 run 1 ===
+Insert on oauth_identities  (cost=0.00..0.01 rows=0 width=0) (actual time=0.353..0.354 rows=0.00 loops=1)
+  Buffers: shared hit=73
+  ->  Result  (cost=0.00..0.01 rows=1 width=112) (actual time=0.004..0.004 rows=1.00 loops=1)
+Planning Time: 0.052 ms
+Trigger for constraint oauth_identities_user_id_fkey: time=0.797 calls=1
+Execution Time: 1.200 ms
+
+=== W26 run 2 ===
+Insert on oauth_identities  (cost=0.00..0.01 rows=0 width=0) (actual time=0.304..0.305 rows=0.00 loops=1)
+  Buffers: shared hit=76
+  ->  Result  (cost=0.00..0.01 rows=1 width=112) (actual time=0.003..0.004 rows=1.00 loops=1)
+Planning Time: 0.065 ms
+Trigger for constraint oauth_identities_user_id_fkey: time=0.729 calls=1
+Execution Time: 1.075 ms
+
+=== W26 run 3 ===
+Insert on oauth_identities  (cost=0.00..0.01 rows=0 width=0) (actual time=0.517..0.518 rows=0.00 loops=1)
+  Buffers: shared hit=76
+  ->  Result  (cost=0.00..0.01 rows=1 width=112) (actual time=0.006..0.006 rows=1.00 loops=1)
+Planning Time: 0.095 ms
+Trigger for constraint oauth_identities_user_id_fkey: time=0.862 calls=1
+Execution Time: 1.456 ms
+

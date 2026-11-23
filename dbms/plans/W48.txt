@@ -1,0 +1,27 @@
+=== W48 run 1 ===
+Insert on api_tokens  (cost=0.00..0.02 rows=0 width=0) (actual time=0.687..0.687 rows=0.00 loops=1)
+  Buffers: shared hit=94
+  ->  Result  (cost=0.00..0.02 rows=1 width=208) (actual time=0.013..0.014 rows=1.00 loops=1)
+Planning Time: 0.089 ms
+Trigger for constraint api_tokens_organization_id_fkey: time=0.800 calls=1
+Trigger for constraint api_tokens_created_by_user_id_fkey: time=0.418 calls=1
+Execution Time: 1.932 ms
+
+=== W48 run 2 ===
+Insert on api_tokens  (cost=0.00..0.02 rows=0 width=0) (actual time=0.367..0.367 rows=0.00 loops=1)
+  Buffers: shared hit=96
+  ->  Result  (cost=0.00..0.02 rows=1 width=208) (actual time=0.010..0.011 rows=1.00 loops=1)
+Planning Time: 0.076 ms
+Trigger for constraint api_tokens_organization_id_fkey: time=0.646 calls=1
+Trigger for constraint api_tokens_created_by_user_id_fkey: time=0.379 calls=1
+Execution Time: 1.417 ms
+
+=== W48 run 3 ===
+Insert on api_tokens  (cost=0.00..0.02 rows=0 width=0) (actual time=0.375..0.376 rows=0.00 loops=1)
+  Buffers: shared hit=96
+  ->  Result  (cost=0.00..0.02 rows=1 width=208) (actual time=0.012..0.012 rows=1.00 loops=1)
+Planning Time: 0.082 ms
+Trigger for constraint api_tokens_organization_id_fkey: time=0.741 calls=1
+Trigger for constraint api_tokens_created_by_user_id_fkey: time=0.364 calls=1
+Execution Time: 1.506 ms
+

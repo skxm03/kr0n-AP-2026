@@ -1,0 +1,30 @@
+=== R29 run 1 ===
+Index Scan using github_installations_org_idx on github_installations  (cost=0.14..8.15 rows=1 width=109) (actual time=0.017..0.018 rows=1.00 loops=1)
+  Index Cond: (organization_id = '10000000-0000-0000-0000-000000000001'::uuid)
+  Index Searches: 1
+  Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=154
+Planning Time: 0.756 ms
+Execution Time: 0.084 ms
+
+=== R29 run 2 ===
+Index Scan using github_installations_org_idx on github_installations  (cost=0.14..8.15 rows=1 width=109) (actual time=0.009..0.010 rows=1.00 loops=1)
+  Index Cond: (organization_id = '10000000-0000-0000-0000-000000000001'::uuid)
+  Index Searches: 1
+  Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=154
+Planning Time: 0.655 ms
+Execution Time: 0.054 ms
+
+=== R29 run 3 ===
+Index Scan using github_installations_org_idx on github_installations  (cost=0.14..8.15 rows=1 width=109) (actual time=0.015..0.015 rows=1.00 loops=1)
+  Index Cond: (organization_id = '10000000-0000-0000-0000-000000000001'::uuid)
+  Index Searches: 1
+  Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=154
+Planning Time: 0.840 ms
+Execution Time: 0.078 ms
+

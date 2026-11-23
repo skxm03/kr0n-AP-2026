@@ -1,0 +1,33 @@
+=== R11 run 1 ===
+Index Scan using sessions_user_active_idx on sessions  (cost=0.14..8.17 rows=1 width=164) (actual time=0.048..0.049 rows=1.00 loops=1)
+  Index Cond: (user_id = '00000000-0000-0000-0000-000000000001'::uuid)
+  Filter: (expires_at > now())
+  Index Searches: 1
+  Buffers: shared hit=4
+Planning:
+  Buffers: shared hit=153
+Planning Time: 0.759 ms
+Execution Time: 0.078 ms
+
+=== R11 run 2 ===
+Index Scan using sessions_user_active_idx on sessions  (cost=0.14..8.17 rows=1 width=164) (actual time=0.016..0.017 rows=1.00 loops=1)
+  Index Cond: (user_id = '00000000-0000-0000-0000-000000000001'::uuid)
+  Filter: (expires_at > now())
+  Index Searches: 1
+  Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=153
+Planning Time: 0.690 ms
+Execution Time: 0.045 ms
+
+=== R11 run 3 ===
+Index Scan using sessions_user_active_idx on sessions  (cost=0.14..8.17 rows=1 width=164) (actual time=0.014..0.014 rows=1.00 loops=1)
+  Index Cond: (user_id = '00000000-0000-0000-0000-000000000001'::uuid)
+  Filter: (expires_at > now())
+  Index Searches: 1
+  Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=153
+Planning Time: 0.761 ms
+Execution Time: 0.037 ms
+

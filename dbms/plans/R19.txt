@@ -1,0 +1,30 @@
+=== R19 run 1 ===
+Index Scan using users_email_key on users  (cost=0.14..8.16 rows=1 width=38) (actual time=0.020..0.028 rows=1.00 loops=1)
+  Index Cond: (email = 'user1@kr0n.dev'::text)
+  Index Searches: 1
+  Buffers: shared hit=4
+Planning:
+  Buffers: shared hit=88
+Planning Time: 0.448 ms
+Execution Time: 0.072 ms
+
+=== R19 run 2 ===
+Index Scan using users_email_key on users  (cost=0.14..8.16 rows=1 width=38) (actual time=0.016..0.017 rows=1.00 loops=1)
+  Index Cond: (email = 'user1@kr0n.dev'::text)
+  Index Searches: 1
+  Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=88
+Planning Time: 0.400 ms
+Execution Time: 0.050 ms
+
+=== R19 run 3 ===
+Index Scan using users_email_key on users  (cost=0.14..8.16 rows=1 width=38) (actual time=0.031..0.032 rows=1.00 loops=1)
+  Index Cond: (email = 'user1@kr0n.dev'::text)
+  Index Searches: 1
+  Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=88
+Planning Time: 0.558 ms
+Execution Time: 0.079 ms
+

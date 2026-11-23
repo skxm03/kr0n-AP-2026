@@ -1,0 +1,72 @@
+=== R15 run 1 ===
+GroupAggregate  (cost=8.66..25.99 rows=3 width=122) (actual time=0.124..0.131 rows=3.00 loops=1)
+  Group Key: r.id
+  Buffers: shared hit=4
+  ->  Incremental Sort  (cost=8.66..25.83 rows=26 width=102) (actual time=0.107..0.109 rows=26.00 loops=1)
+        Sort Key: r.id, rp.permission_id
+        Presorted Key: r.id
+        Full-sort Groups: 1  Sort Method: quicksort  Average Memory: 28kB  Peak Memory: 28kB
+        Buffers: shared hit=4
+        ->  Merge Left Join  (cost=0.27..25.04 rows=26 width=102) (actual time=0.051..0.069 rows=26.00 loops=1)
+              Merge Cond: (r.id = rp.role_id)
+              Buffers: shared hit=4
+              ->  Index Scan using roles_pkey on roles r  (cost=0.13..12.18 rows=3 width=90) (actual time=0.002..0.003 rows=3.00 loops=1)
+                    Index Searches: 1
+                    Buffers: shared hit=2
+              ->  Index Only Scan using role_permissions_pkey on role_permissions rp  (cost=0.14..12.53 rows=26 width=18) (actual time=0.039..0.048 rows=26.00 loops=1)
+                    Heap Fetches: 26
+                    Index Searches: 1
+                    Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=142
+Planning Time: 1.544 ms
+Execution Time: 0.216 ms
+
+=== R15 run 2 ===
+GroupAggregate  (cost=8.66..25.99 rows=3 width=122) (actual time=0.141..0.148 rows=3.00 loops=1)
+  Group Key: r.id
+  Buffers: shared hit=4
+  ->  Incremental Sort  (cost=8.66..25.83 rows=26 width=102) (actual time=0.123..0.125 rows=26.00 loops=1)
+        Sort Key: r.id, rp.permission_id
+        Presorted Key: r.id
+        Full-sort Groups: 1  Sort Method: quicksort  Average Memory: 28kB  Peak Memory: 28kB
+        Buffers: shared hit=4
+        ->  Merge Left Join  (cost=0.27..25.04 rows=26 width=102) (actual time=0.064..0.082 rows=26.00 loops=1)
+              Merge Cond: (r.id = rp.role_id)
+              Buffers: shared hit=4
+              ->  Index Scan using roles_pkey on roles r  (cost=0.13..12.18 rows=3 width=90) (actual time=0.002..0.003 rows=3.00 loops=1)
+                    Index Searches: 1
+                    Buffers: shared hit=2
+              ->  Index Only Scan using role_permissions_pkey on role_permissions rp  (cost=0.14..12.53 rows=26 width=18) (actual time=0.053..0.061 rows=26.00 loops=1)
+                    Heap Fetches: 26
+                    Index Searches: 1
+                    Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=142
+Planning Time: 1.131 ms
+Execution Time: 0.240 ms
+
+=== R15 run 3 ===
+GroupAggregate  (cost=8.66..25.99 rows=3 width=122) (actual time=0.076..0.080 rows=3.00 loops=1)
+  Group Key: r.id
+  Buffers: shared hit=4
+  ->  Incremental Sort  (cost=8.66..25.83 rows=26 width=102) (actual time=0.063..0.065 rows=26.00 loops=1)
+        Sort Key: r.id, rp.permission_id
+        Presorted Key: r.id
+        Full-sort Groups: 1  Sort Method: quicksort  Average Memory: 28kB  Peak Memory: 28kB
+        Buffers: shared hit=4
+        ->  Merge Left Join  (cost=0.27..25.04 rows=26 width=102) (actual time=0.024..0.035 rows=26.00 loops=1)
+              Merge Cond: (r.id = rp.role_id)
+              Buffers: shared hit=4
+              ->  Index Scan using roles_pkey on roles r  (cost=0.13..12.18 rows=3 width=90) (actual time=0.002..0.002 rows=3.00 loops=1)
+                    Index Searches: 1
+                    Buffers: shared hit=2
+              ->  Index Only Scan using role_permissions_pkey on role_permissions rp  (cost=0.14..12.53 rows=26 width=18) (actual time=0.016..0.022 rows=26.00 loops=1)
+                    Heap Fetches: 26
+                    Index Searches: 1
+                    Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=142
+Planning Time: 0.833 ms
+Execution Time: 0.146 ms
+

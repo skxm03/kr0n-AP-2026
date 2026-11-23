@@ -1,0 +1,66 @@
+=== R9 run 1 ===
+LockRows  (cost=8.31..13.33 rows=1 width=183) (actual time=0.106..0.108 rows=1.00 loops=1)
+  Buffers: shared hit=7
+  ->  Merge Join  (cost=8.31..13.32 rows=1 width=183) (actual time=0.082..0.083 rows=1.00 loops=1)
+        Merge Cond: (s.user_id = u.id)
+        Buffers: shared hit=6
+        ->  Sort  (cost=8.17..8.17 rows=1 width=145) (actual time=0.048..0.049 rows=1.00 loops=1)
+              Sort Key: s.user_id
+              Sort Method: quicksort  Memory: 25kB
+              Buffers: shared hit=2
+              ->  Index Scan using sessions_token_hash_key on sessions s  (cost=0.14..8.16 rows=1 width=145) (actual time=0.028..0.029 rows=1.00 loops=1)
+                    Index Cond: (token_hash = 'token_hash_sess_001'::text)
+                    Index Searches: 1
+                    Buffers: shared hit=2
+        ->  Index Scan using users_pkey on users u  (cost=0.14..16.39 rows=150 width=29) (actual time=0.010..0.023 rows=2.00 loops=1)
+              Index Searches: 1
+              Buffers: shared hit=4
+Planning:
+  Buffers: shared hit=294
+Planning Time: 1.477 ms
+Execution Time: 0.197 ms
+
+=== R9 run 2 ===
+LockRows  (cost=8.31..13.33 rows=1 width=183) (actual time=0.096..0.098 rows=1.00 loops=1)
+  Buffers: shared hit=5
+  ->  Merge Join  (cost=8.31..13.32 rows=1 width=183) (actual time=0.067..0.067 rows=1.00 loops=1)
+        Merge Cond: (s.user_id = u.id)
+        Buffers: shared hit=4
+        ->  Sort  (cost=8.17..8.17 rows=1 width=145) (actual time=0.047..0.047 rows=1.00 loops=1)
+              Sort Key: s.user_id
+              Sort Method: quicksort  Memory: 25kB
+              Buffers: shared hit=2
+              ->  Index Scan using sessions_token_hash_key on sessions s  (cost=0.14..8.16 rows=1 width=145) (actual time=0.028..0.029 rows=1.00 loops=1)
+                    Index Cond: (token_hash = 'token_hash_sess_001'::text)
+                    Index Searches: 1
+                    Buffers: shared hit=2
+        ->  Index Scan using users_pkey on users u  (cost=0.14..16.39 rows=150 width=29) (actual time=0.009..0.010 rows=2.00 loops=1)
+              Index Searches: 1
+              Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=294
+Planning Time: 1.872 ms
+Execution Time: 0.182 ms
+
+=== R9 run 3 ===
+LockRows  (cost=8.31..13.33 rows=1 width=183) (actual time=0.112..0.115 rows=1.00 loops=1)
+  Buffers: shared hit=5
+  ->  Merge Join  (cost=8.31..13.32 rows=1 width=183) (actual time=0.075..0.076 rows=1.00 loops=1)
+        Merge Cond: (s.user_id = u.id)
+        Buffers: shared hit=4
+        ->  Sort  (cost=8.17..8.17 rows=1 width=145) (actual time=0.058..0.059 rows=1.00 loops=1)
+              Sort Key: s.user_id
+              Sort Method: quicksort  Memory: 25kB
+              Buffers: shared hit=2
+              ->  Index Scan using sessions_token_hash_key on sessions s  (cost=0.14..8.16 rows=1 width=145) (actual time=0.031..0.032 rows=1.00 loops=1)
+                    Index Cond: (token_hash = 'token_hash_sess_001'::text)
+                    Index Searches: 1
+                    Buffers: shared hit=2
+        ->  Index Scan using users_pkey on users u  (cost=0.14..16.39 rows=150 width=29) (actual time=0.006..0.006 rows=2.00 loops=1)
+              Index Searches: 1
+              Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=294
+Planning Time: 0.991 ms
+Execution Time: 0.184 ms
+

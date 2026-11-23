@@ -1,0 +1,39 @@
+=== W16 run 1 ===
+Update on sessions  (cost=0.14..8.16 rows=0 width=0) (actual time=0.199..0.200 rows=0.00 loops=1)
+  Buffers: shared hit=18
+  ->  Index Scan using sessions_user_active_idx on sessions  (cost=0.14..8.16 rows=1 width=14) (actual time=0.020..0.021 rows=1.00 loops=1)
+        Index Cond: (user_id = '00000000-0000-0000-0000-000000000001'::uuid)
+        Filter: ((revoked_at IS NULL) AND (id <> '30000000-0000-0000-0000-000000000001'::uuid))
+        Index Searches: 1
+        Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=109
+Planning Time: 0.544 ms
+Execution Time: 0.316 ms
+
+=== W16 run 2 ===
+Update on sessions  (cost=0.14..8.16 rows=0 width=0) (actual time=0.218..0.218 rows=0.00 loops=1)
+  Buffers: shared hit=18
+  ->  Index Scan using sessions_user_active_idx on sessions  (cost=0.14..8.16 rows=1 width=14) (actual time=0.025..0.026 rows=1.00 loops=1)
+        Index Cond: (user_id = '00000000-0000-0000-0000-000000000001'::uuid)
+        Filter: ((revoked_at IS NULL) AND (id <> '30000000-0000-0000-0000-000000000001'::uuid))
+        Index Searches: 1
+        Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=109
+Planning Time: 0.631 ms
+Execution Time: 0.375 ms
+
+=== W16 run 3 ===
+Update on sessions  (cost=0.14..8.16 rows=0 width=0) (actual time=0.159..0.160 rows=0.00 loops=1)
+  Buffers: shared hit=18
+  ->  Index Scan using sessions_user_active_idx on sessions  (cost=0.14..8.16 rows=1 width=14) (actual time=0.022..0.022 rows=1.00 loops=1)
+        Index Cond: (user_id = '00000000-0000-0000-0000-000000000001'::uuid)
+        Filter: ((revoked_at IS NULL) AND (id <> '30000000-0000-0000-0000-000000000001'::uuid))
+        Index Searches: 1
+        Buffers: shared hit=2
+Planning:
+  Buffers: shared hit=109
+Planning Time: 0.595 ms
+Execution Time: 0.289 ms
+
